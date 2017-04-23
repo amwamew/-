@@ -1,0 +1,130 @@
+/*头部部分*/
+.header {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    background: #212433;
+    /*opacity:0.8;*/
+}
+
+.header .main-nav-l {
+    float: left;
+}
+
+.header li {
+    float: left;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.header li a {
+    display: block;
+    color: #dbdbdb;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header a:hover {
+    color: #CC0000;
+}
+
+.header .main-nav-r {
+    float: right;
+    position: relative;
+}
+
+.header .main-nav-r a {
+    font-size: 16px;
+}
+
+.header .sub-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50px;
+    left: 220px;
+    z-index: 99;
+    display: none;
+}
+
+.header dl {
+    float: left;
+    padding: 10px;
+    margin: 15px;
+}
+
+.header dl a {
+    color: #cccccc;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.header dl a:hover {
+    color: #fff;
+    /*font-weight: 600;*/
+    text-decoration: underline;
+}
+
+/*banner部分*/
+.banner {
+    position: relative;
+}
+.banner .left {
+    height: 440px;
+    width: 150px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    display: none;
+}
+
+.banner .right {
+    height: 440px;
+    width: 150px;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    display: none;
+}
+
+.wrap {
+    width: 1180px;
+    margin: 10px auto;
+}
+
+.slide {
+    height: 400px;
+    position: relative;
+}
+
+.slide li {
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+.slide li img {
+    width: 100%;
+}
+
+.arrow {
+    opacity: 0;
+}
+
+.prev, .next {
+    width: 76px;
+    height: 112px;
+    position: absolute;
+    top: 50%;
+    margin-top: -56px;
+    background: url(../images/prev.png) no-repeat;
+    z-index: 99;
+}
+
+.next {
+    right: 0;
+    background-image: url(../images/next.png);
+}

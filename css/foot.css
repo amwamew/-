@@ -1,0 +1,16 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.hd{display: none;}
+#BAIDU_DUP_wrapper_1069145_0{display: none;}
+ul{list-style:none;margin:0;padding:0;}
+a{text-decoration:none;}
+.sFoot{background:#f6f6f6;border-top: 1px solid #e3e3e3}
+.sInner{width:1000px;margin:0 auto;font-family:"宋体";font-size:12px;padding-top:31px;padding-bottom:36px;}
+.sLink{background:url(../images/bline.gif) repeat-x;height:34px;padding-left:155px;}
+.sLink ul li{display:inline;float:left;border-right:1px solid #ccc;}
+.sLink ul li.borNo{border:none;}
+.sLink ul li a{display:block;color:#333;padding-left:15px;padding-right:15px;}
+.sInner p{text-align:center;color:#666;margin-top:20px;}
+.sInner p a{color:#666;}
+.sInner a:hover{color:#cc0000;text-decoration:underline;}
+.sInner p span{padding-left:10px;padding-right:10px;}

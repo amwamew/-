@@ -1,0 +1,3 @@
+﻿文件下载网址  =>  文件保存路径
+http://www.apple.com/ac/globalnav/2.0/zh_CN/assets/ac-store/view.png  =>  E:\仿站小工具\fzxgjV3.0\www.apple.com\images\view.png
+http://www.apple.com/ac/globalnav/2.0/zh_CN/assets/ac-store/view.svg  =>  E:\仿站小工具\fzxgjV3.0\www.apple.com\images\view.svg

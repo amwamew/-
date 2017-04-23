@@ -1,0 +1,278 @@
+
+.top{
+    width: 100%;
+    height: 55px;
+    background-color: #FBFBFB;
+}
+.top img{
+    margin-left: 148px;
+}
+.top-title{
+    margin-right: 200px;
+     line-height: 55px;
+}
+.top-title a{
+     margin-right: 26px;
+    font:12px "微软雅黑";
+}
+.top-title a:hover{
+   color: #BC2E2E;
+}
+.top-tit{
+    color: #BC2E2E;
+}
+
+
+/*SHE*/
+/*==========================头部标题栏===================================*/
+.nav{
+    height: 36px;
+    width: 100%;
+    background-color: #080915;
+    padding-top: 10px;
+    padding-bottom:15px ;
+}
+.nav a{
+    display: block;
+    width: 120px;
+    line-height: 36px;
+    padding-left:40px;
+    padding-bottom: 10px;
+    float: left;
+    border-left: 1px dotted #8282BD;
+}
+.nav .nav-1{
+    border:0 none;
+    margin-left: 200px;
+}
+
+
+/*-------------------------min-1 动画区域-------------------------*/
+.main-1{
+       width: 100%;
+       height: 800px;
+       position: relative;
+       overflow: hidden;
+       background: url("../images/loading_f3a5e74.jpg") -216px 0 ;
+}
+.main-1 .jiazaiquan{
+    position: absolute;
+    left: 652px;
+    top: 435px;
+}
+.main-1 .bg{
+     position: absolute;
+     top: -190px;
+     display: none;
+}
+
+.door-left{
+     position: absolute;
+     left: -900px;
+     top: -55px;
+     opacity: 0;
+}
+.door-right{
+    position: absolute;
+    right: -900px;
+    top: -55px;
+   opacity: 0;
+
+}
+.img-people{
+    position: absolute;
+    display: none;
+    width:91%;
+    left: 50%;
+    margin-left: -600px;
+    display: none;
+}
+.img-head{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    display: none;
+}
+.img-title{
+    position: absolute;
+    left:50%;
+    margin-left:-393px;
+    top: 470px;
+    display: none;
+}
+.erweima{
+    position: absolute ;
+    left:550px;
+    top: 670px;
+    display: none;
+}
+.flower1{
+    position: absolute;
+    display: none;
+}
+.flower2{
+    position: absolute;
+    display: none;
+    width:1350px ;
+    height:500px ;
+}
+
+
+/*-------------------------min-2 区域-------------------------*/
+.main-2 {
+    width: 100%;
+    height: 841px;
+    background: url("../images/juqing_bg_02c1c18.jpg")  no-repeat;
+    padding-top: 50px;
+    position: relative;
+}
+
+
+.main-2 .main2-title {
+    width: 531px;
+    height: 98px;
+    opacity: 0;
+    background: url("../images/title1_2b782f6.png") 0 0 no-repeat;
+    margin: 0 auto;
+
+}
+.main-2 .main-video-2 {
+    /*width: 700px;*/
+    /*height: 396px;*/
+    /*border: 1px solid red;*/
+    margin-top: 38px;
+    margin-left: 178px;
+}
+.main-2 .main-video-2 a {
+    display: block;
+    width: 700px;
+    height: 396px;
+    background: url("../images/shijieguan_video_bg_d2deb38.jpg")  no-repeat;
+}
+.main-2 .main-video-2 a span {
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    width: 74px;
+    height: 76px;
+    position: absolute;
+    margin-left: -114px;
+}
+em.dxem {
+    display: block;
+    width: 63px;
+    height: 65px;
+    background: url("../images/index_z_d94da60.png") -560px -606px no-repeat;
+}
+.main-2 span i {
+    width: 13px;
+    height: 21px;
+    background: url("../images/index_z_d94da60.png") -879px -150px no-repeat;
+    position: absolute;
+    top: 22px;
+    left: 28px;
+}
+.main-2 .main-video-btm {
+    width: 710px;
+    height: 149px;
+    background: url("../images/shijiehuan_txt_e88a42e.png")  no-repeat;
+    margin-top: 20px;
+    margin-left: 178px;
+}
+
+.main-2 .main-video-btm p {
+    color: #34241c;
+    line-height: 24px;
+    font-size: 15px;
+    padding: 30px;
+}
+
+.main-2 .main-sideimg {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    margin-left:215px;
+}
+.main-2 .main-sideimg img{
+    width: 450px;
+    height: 660px;
+}
+.main-2 .main2-l-side {
+    width: 115px;
+    height: 250px;
+    background: url("../images/side_juqing_0b1b064.png") -4px 0 no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -125px;
+}
+.main-2 .main2-l-side a{
+    position: absolute;
+    width: 90px;
+    height: 80px;
+}
+.main-2 .main2-l-side .shijieguan{
+    left:0;
+    top: 0;
+}
+.main-2 .main2-l-side a span {
+    background-repeat: no-repeat;
+    width: 101px;
+    height: 102px;
+    position: absolute;
+}
+.main-2 .main2-l-side .shijieguan span {
+    background: url("../images/index_z_d94da60.png") -321px 0;
+    top: 11px;
+    left: 0;
+    opacity: 0;
+}
+.main-2 .main2-l-side .zhujiao {
+    left: 28px;
+    top: 81px;
+
+}
+.main-2 .main2-l-side .zhujiao span {
+    background: url("../images/index_z_d94da60.png") -184px -137px;
+    left: -5px;
+    top: -13px;
+    width: 92px;
+    height: 116px;
+    opacity: 0;
+}
+.main-2 .main2-l-side .wutaiju {
+    left: 0;
+    bottom: 0;
+}
+.main-2 .main2-l-side .wutaiju span {
+     background: url("../images/index_z_d94da60.png") -304px -253px;
+     left: -2px;
+     top: -34px;
+     opacity: 0;
+ }
+.main-2 .left-pic a{
+    position: absolute;
+    top: 200px;
+    width: 538px;
+    height: 538px;
+    background: url("../images/wutaiju1_6d60e65.png") 0 0 no-repeat;
+}
+.main-2 .left-pic span {
+    position: absolute;
+    top: 220px;
+    left: 239px;
+}
+.main-2 .right-pic a {
+    position: absolute;
+    top: 200px;
+    right: 250px;
+    width: 538px;
+    height: 538px;
+    background: url("../images/wutaiju2_98957a6.png") 0 0 no-repeat;
+}
+.main-2 .right-pic span {
+    position: absolute;
+    top: 220px;
+    right: 238px;
+}
+
+

@@ -1,0 +1,89 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{
+	font-size:12px;
+	color:#000;
+	font-family: "微软雅黑","黑体";
+}
+a{
+	color:#000;
+}
+a:hover{
+	color:#c69719;
+	text-decoration:none;
+}
+.navW{
+	border-bottom:1px solid #000;
+	height:70px;
+}
+.nav{
+	height:64px;
+	border-bottom:3px solid #000;
+}
+.nav ul{
+	padding-left:20px;
+}
+.nav li{
+	width:64px;
+	float:left;
+	margin:0 42px;
+	display:inline;
+	position:relative;
+}
+.nav li a{
+	display:block;
+	overflow:hidden;
+	height:64px;
+}
+.nav li a i{
+	width:64px;
+	height:31px;
+	background:url(../images/font.png) no-repeat 0 -217px;
+	top:21px;
+	display:none;
+	left:0;
+	position:absolute;
+	
+}
+.nav li a:hover i{
+	display:block;
+}
+.nav li a p{
+	position:absolute;
+	text-indent:-999px;
+	overflow:hidden;
+	width:64px;
+	height:31px;
+	left:0;
+	top:21px;
+	z-index:3;
+	background:url(../images/font.png) no-repeat 0 0;
+}
+.nav li.tt1 a p,
+.nav li.tt1 a:hover p{
+	background-position:0 0;
+}
+.nav li.tt2 a p,
+.nav li.tt2 a:hover p{
+	background-position:0 -31px;
+}
+.nav li.tt3 a p,
+.nav li.tt3 a:hover p{
+	background-position:0 -62px;
+}
+.nav li.tt4 a p,
+.nav li.tt4 a:hover p{
+	background-position:0 -93px;
+}
+.nav li.tt5 a p,
+.nav li.tt5 a:hover p{
+	background-position:0 -124px;
+}
+.nav li.tt6 a p,
+.nav li.tt6 a:hover p{
+	background-position:0 -155px;
+}
+.nav li.tt7 a p,
+.nav li.tt7 a:hover p{
+	background-position:0 -186px;
+}

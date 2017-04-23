@@ -1,0 +1,54 @@
+﻿/*PC*/
+html[lang=zh-CN] body, .main .intro, html[lang=zh-CN].oldie body, html[lang=zh-CN].oldie .main, html[lang=zh-CN] a, html[lang=zh-CN].oldie a, html[lang=zh-CN].ie8 a{font-family: 'Microsoft yahei','微软雅黑', "Helvetica Neue", "Helvetica", "Arial", sans-serif;}
+
+html[lang=zh-CN].oldie h1, 
+html[lang=zh-CN].oldie h2, 
+html[lang=zh-CN].oldie h3, 
+html[lang=zh-CN].oldie h4,
+html[lang=zh-CN].oldie .localnav-link, 
+html[lang=zh-CN].oldie .button-buynow, 
+html[lang=zh-CN].oldie .button-compact,
+html[lang=zh-CN].oldie .intro, 
+html[lang=zh-CN].oldie .intro a,
+html[lang=zh-CN].oldie .section-headline,  
+html[lang=zh-CN].oldie .hero-headline,
+html[lang=zh-CN].oldie .subsection-subheadline,
+html[lang=zh-CN].oldie .subsection-headline,
+html[lang=zh-CN].oldie #ac-localnav, 
+html[lang=zh-CN].oldie #ac-localnav select, 
+html[lang=zh-CN].oldie #ac-localnav button,
+html[lang=zh-CN].oldie #ac-localnav .ac-ln-button,
+html[lang=zh-CN].oldie #ac-globalfooter .ac-gf-buystrip-info-copy,
+html[lang=zh-CN].oldie #ac-globalfooter .ac-gf-buystrip-info-title,
+html[lang=zh-CN].oldie #ac-globalfooter a.ac-gf-block .ac-gf-block-link,
+html[lang=zh-CN].oldie #ac-globalfooter .ac-gf-sosumi p, 
+html[lang=zh-CN].oldie #ac-globalfooter .ac-gf-sosumi li,
+html[lang=zh-CN].oldie #ac-globalfooter .ac-gf-buystrip-info-caption,
+html[lang=zh-CN].oldie #ac-globalfooter, 
+html[lang=zh-CN].oldie #ac-globalfooter select,
+html[lang=zh-CN].oldie #ac-globalfooter button,
+html[lang=zh-CN].oldie span.badge-half,
+html[lang=zh-CN].oldie span.badge-small{font-family: 'HanHei TC 100';}
+
+html[lang=zh-CN].ie8 .elevated-intro,
+html[lang=zh-CN].ie8 .eyebrow,
+html[lang=zh-CN].ie8 .hero-headline,
+html[lang=zh-CN].ie8 .main .hero-headline,
+html[lang=zh-CN].ie8 .section-headline,
+html[lang=zh-CN].ie8 .main .section-headline,
+html[lang=zh-CN].ie8 .intro,
+html[lang=zh-CN].ie8 .main .intro,
+html[lang=zh-CN].ie8 .subsection-headline,
+html[lang=zh-CN].ie8 .main .subsection-headline,
+html[lang=zh-CN].ie8 .subsection-subheadline,
+html[lang=zh-CN].ie8 .description-headline,
+html[lang=zh-CN].ie8 .page-specs .description-headline,
+html[lang=zh-CN].ie8 .main .elevated-subhead,
+html[lang=zh-CN].ie8 .main .elevated-copy,
+html[lang=zh-CN].ie8 .main .subsection-subheadline-custom,
+html[lang=zh-CN].ie8 .page-specs .specs-table .specs-headling{font-family: 'HanHei TC';}
+
+ 
+.footer-shop, .footer-links, .footer-sosumi{font-size:10px; line-height:1.5;}
+.fix-width{width:65%;}
+/*PC end*/   

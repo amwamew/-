@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bass.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <script src="jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div class="nav">
+
+</div>
+<div class="box">
+    <div class="half">
+        <p>注册相关信息 .</p>
+
+        <div>
+            <input class="panner" type="text" value="账号"/><span>请输入您的正确账号</span>
+            <input class="panner-yx" type="text" value="name@example.com"/><span>请输入您的真实邮箱</span>
+        </div>
+
+        <div>
+            <input type="text" value="密码"/><span>登录密码由6-18位英文数字及字母符号组成</span>
+            <div id="password" class="pwd"></div>
+        </div>
+
+        <p>实名认证信息 .</p>
+
+        <div>
+            <input class="panner" type="text" value="真实姓名"/><span>请输入您的真实姓名</span>
+            <input class="panner-yx" type="text" value="身份证号"/><span>请填写正确的身份证号</span>
+        </div>
+
+        <div>
+            <input type="text" value="安全邮箱"/><span>安全邮箱是您修改密码的重要依据，务必真实填写牢记</span>
+        </div>
+
+        <!--底部协议-->
+        <div class="dibu">
+            <input class="butt" type="checkbox"/><i>我同意《乐游无限用户使用协议》</i>
+        </div>
+        <span id= "cz" class="cz">注册</span>
+        <!--<p>这些问题用于验证您的身份，以及在您忘记密码时恢复您的密码。</p>-->
+
+
+    </div>
+</div>
+
+<div>
+    <img src=""
+</div>
+
+
+
+<script>
+    var inpArr = document.getElementsByTagName("input");
+    var password = document.getElementById("password");
+    var butt = document.getElementsByClassName("butt")[0];
+    var cz = document.getElementsByTagName("cz")[0];
+
+    //---1:
+
+    var bool = true;
+    inpArr[0].onfocus = function () {
+        //判断：只有内容为"VR虚拟现实"的时候才清空。
+        if (this.value === "账号") {
+            this.value = "";
+        }
+    }
+    inpArr[0].onblur = function () {
+        if (/^[a-zA-Z0-9_\-\$]{3,16}$/.test(this.value)) {
+            this.nextSibling.className = "right";
+            this.nextSibling.innerHTML = "恭喜您输入正确！";
+        }else if (this.value === "") {
+            this.value = "账号";
+            this.nextSibling.className = "";
+            this.nextSibling.innerHTML = "请输入您的正确账号";
+            bool = false;
+        } else {
+            this.nextSibling.className = "wrong";
+            this.nextSibling.innerHTML = "对不起，格式错误！";
+            bool = false;
+        }
+
+        }
+
+
+    //----2:
+
+    inpArr[1].onfocus = function () {
+        //判断：只有内容为"VR虚拟现实"的时候才清空。
+        if (this.value === "name@example.com") {
+            this.value = "";
+        }
+    }
+    inpArr[1].onblur = function () {
+        //判断：只有内容为空的时候才设置。
+        if (/^[\w\-\.]+\@[\w]+\.[\w]{2,4}$/.test(this.value)) {
+            this.nextSibling.className = "right";
+            this.nextSibling.innerHTML = "恭喜您输入正确！";
+        }else if (this.value === "") {
+            this.value = "name@example.com";
+            this.nextSibling.className = "";
+            this.nextSibling.innerHTML = "请输入您的真实邮箱";
+            bool = false;
+        } else {
+            this.nextSibling.className = "wrong";
+            this.nextSibling.innerHTML = "对不起，格式错误！";
+            bool = false;
+        }
+
+
+    }
+
+    //----3:
+
+    //第三个： 密码
+    inpArr[2].onfocus = function () {
+        //判断：只有内容为"VR虚拟现实"的时候才清空。
+        if (this.value === "密码") {
+            this.value = "";
+        }
+    }
+    inpArr[2].onblur = function () {
+        var reg1 = /^[\$\w\-]{6,18}$/;
+        if (reg1.test(this.value)) {
+            this.nextSibling.className = "right";
+            this.nextSibling.innerHTML = "恭喜您输入正确！";
+            password.className = "pwd str1";
+            if (/^[A-Za-z0-9]+[_$]+[A-Za-z0-9]*$/.test(this.value)) {
+                password.className = "pwd str4";
+            } else if (/^([a-z].*[0-9])|([A-Z].*[0-9])|([0-9].*[a-zA-Z])$/.test(this.value)) {
+                password.className = "pwd str3";
+            } else if (/^([a-z].*[A-Z])|([A-Z].*[a-z])$/.test(this.value)) {
+                password.className = "pwd str2";
+            }
+        }else if (this.value === "") {
+            this.value = "密码";
+            this.nextSibling.className = "";
+            password.className = "pwd str0";
+            this.nextSibling.innerHTML = "登录密码由6-18位英文数字及字母符号组成";
+            bool = false;
+        } else {
+            this.nextSibling.className = "wrong";
+            this.nextSibling.innerHTML = "对不起，格式错误！";
+            bool = false;
+        }
+
+
+    }
+
+
+    //第四个：名字
+    inpArr[3].onfocus = function () {
+        //判断：只有内容为"VR虚拟现实"的时候才清空。
+        if (this.value === "真实姓名") {
+            this.value = "";
+        }
+    }
+    inpArr[3].onblur = function () {
+        var reg = /^[\u4e00-\u9fa5]{2,4}$/;
+        if (reg.test(this.value)) {
+            this.nextSibling.className = "right";
+            this.nextSibling.innerHTML = "恭喜您输入正确！";
+        }else if (this.value === "") {
+            this.value = "真实姓名";
+            this.nextSibling.className = "";
+            this.nextSibling.innerHTML = "请输入您的真实姓名";
+            bool = false;
+        } else {
+            this.nextSibling.className = "wrong";
+            this.nextSibling.innerHTML = "对不起，格式错误！";
+            bool = false;
+        }
+    }
+
+    inpArr[4].onfocus = function () {
+        //判断：只有内容为"VR虚拟现实"的时候才清空。
+        if (this.value === "身份证号") {
+            this.value = "";
+        }
+    }
+    inpArr[4].onblur = function () {
+        var reg = /^1[\d]{17}$/
+        if (reg.test(this.value)) {
+            this.nextSibling.className = "right";
+            this.nextSibling.innerHTML = "恭喜您输入正确！";
+        }else if (this.value === "") {
+            this.value = "身份证号";
+            this.nextSibling.className = "";
+            this.nextSibling.innerHTML = "请填写正确的身份证号";
+            bool = false;
+        } else {
+            this.nextSibling.className = "wrong";
+            this.nextSibling.innerHTML = "对不起，格式错误！";
+            bool = false;
+        }
+
+    }
+
+    //安全邮箱
+
+    inpArr[5].onfocus = function () {
+        //判断：只有内容为"VR虚拟现实"的时候才清空。
+        if (this.value === "安全邮箱") {
+            this.value = "";
+        }
+    }
+    inpArr[5].onblur = function () {
+        if (/^[\w\-\.]+\@[\w]+\.[\w]{2,4}$/.test(this.value)) {
+            this.nextSibling.className = "right";
+            this.nextSibling.innerHTML = "恭喜您输入正确！";
+        }else if (this.value === "") {
+            this.value = "安全邮箱";
+            this.nextSibling.className = "";
+            this.nextSibling.innerHTML = "安全邮箱是您修改密码的重要依据，务必真实填写牢记";
+            bool = false;
+        } else {
+            this.nextSibling.className = "wrong";
+            this.nextSibling.innerHTML = "对不起，格式错误！";
+            bool = false;
+        }
+    }
+
+
+    butt.onclick = function(){
+        bool = butt.checked;
+        if(bool = true){
+            cz.className = "zc";
+        }
+    }
+
+
+
+
+    $(function () {
+        //利用过滤选择器隔行变色
+        $("input").css("background","#7D7D79");
+
+        //计数器
+        var color;
+
+
+        //鼠标进入改变颜色
+        $("input").mouseover(function () {
+            //鼠标进入不要着急赋值，先获取颜色。当鼠标离开的时候恢复该颜色
+            color = this.style.background;
+            this.style.background = "#E4B505";
+            //this，永远代指原生js的事件源。
+            //console.dir(this);
+            //$(this).css("background","purple");
+        });
+
+        //鼠标移开变回颜色
+        $("input").mouseout(function () {
+            this.style.background = color;
+        });
+    })
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,930 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="Copyright" content="TENCNET" />
+<meta name="author" content="Tencent-TGideas" />
+<meta name="keywords" content="英雄联盟,lol,lol新手礼包,lol攻略,lol视频,lol视频攻略,英雄资料,英雄联盟战争学院,明星解说视频,101战争学院,英雄,攻略,WCG,点亮图标,赛事" />
+<meta name="description" content="英雄联盟官方网站，海量风格各异的英雄，丰富、便捷的物品合成系统，游戏内置的匹配、排行和竞技系统，独创的“召唤师”系统及技能、符文、天赋等系统组合，必将带你进入一个崭新而又丰富多彩的游戏世界。" />
+<title>英雄联盟官方网站-腾讯游戏</title>
+<!-- 设计：帅呆 | 重构：小倪 | 创建：20160627 | 团队博客：http://tgideas.qq.com -->
+<!--<script type="text/javascript">var d0 = new Date();</script>-->
+<link href="css/public.css" rel="stylesheet" />
+<link href="css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="chromeframe">您使用的IE浏览器版本过低，本站不再支持，<a href="http://windows.microsoft.com/">升级您的IE浏览器</a>，或使用<a href="http://www.google.cn/chrome/">Google Chrome</a>、<a href="http://www.firefox.com.cn/download/">Firefox</a>等高级浏览器，将会得到更好的体验！</p>
+<![endif]-->
+<div class="header">
+
+    <!--主导航 S-->
+    <div class="main-nav">
+        <ul id="J_nav" class="main-nav-inner">
+            <li><a href="/" onclick="pgvSendClick({hottag:'header.nav.home.link'})">官网首页<span>home</span></a></li>
+            <li><a href="/web201310/info-heros.shtml" onclick="pgvSendClick({hottag:'header.nav.info.link'})">游戏资料<span>GAME INFO</span></a></li>
+            <li><a class="n" href="javascript:void(0)">商城/合作<span>STORE</span></a></li>
+            <li><a class="n" href="javascript:void(0)">用户互动<span>COMMUNITY</span></a></li>
+            <li><a href="/match/" onclick="pgvSendClick({hottag:'header.nav.match.link'})" target="_blank">赛事中心<span>EVENTS</span></a></li>
+            <li><a class="n" href="javascript:void(0)">自助系统<span>SYSTEM</span></a></li>
+            <li><a href="/web201310/personal.shtml" onclick="pgvSendClick({hottag:'header.nav.personal.link'})">个人中心<span>user center</span></a></li>
+        </ul>
+        <!--下拉子导航 S-->
+        <div id="J_subNav" class="sub-nav">
+            <ul class="sub-nav-inner">
+                <li class="sub-nav-item">&nbsp;</li>
+                <li class="sub-nav-item">
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.info.what'})" href="/web201310/newbie-what.shtml">新手指引</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.info.heros'})" href="/web201310/info-heros.shtml">资料库</a>
+                    <!--<a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.info.guides'})" href="/web201310/101/guides.shtml">战争学院</a>-->
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.info.guides'})" href="/guide/">攻略中心</a>
+
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.info.rgm'})" href="/act/a20160412rgm/">模式实验室</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.info.loot'})" href="/act/a20160713loot/">海克斯战利品库</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.info.protect'})" href="/act/a20161101pbcxym/">屏保下载</a>
+                </li>
+                <li class="sub-nav-item">
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.store.pay'})" target="_blank" href="http://lol.qq.com/comm-htdocs/pay/new_index.htm?t=lol"><i class="publicspr ico-h"></i>点券充值</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.store.daoju'})" target="_blank" href="http://daoju.qq.com/lol/">道聚城</a>
+                    <!--<a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.store.paipai'})" target="_blank" href="http://chong.qq.com/game/items_mall_list.shtml">拍拍商城</a>-->
+                    <!--<a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.store.cdkey'})" href="/web201310/cdkey.shtml">CDKey兑换</a>-->
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.store.mall'})" href="http://lolriotmall.qq.com/index.html?ADTAG=lol.rk.gw.top&adunionsid=gwtop" target="_blank">周边商城周年庆</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.store.mvm'})" href="http://lol.qq.com/mvm/?ADTAG=lol.rk.gw.top" target="_blank">英雄联盟桌游</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.store.cmb'})" href="/act/a20131027cmb/" target="_blank">LOL信用卡</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.store.netbar'})" href="http://cafe.qq.com/" target="_blank">网吧特权</a>
+                </li>
+                <li class="sub-nav-item">
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.user.online'})" href="http://crm2.qq.com/page/portalpage/wpa.php?uin=40012345&f=1&ty=1&ap=000011:400998:|m:11|f:Gyxlm3">在线客服</a>
+                    <!--<a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.user.video'})" href="/v/">视频中心</a>-->
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.user.active'})" href="/web201310/active.shtml">活动中心</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.user.bbs'})" target="_blank" href="http://bbs.lol.qq.com/forum.php">官方论坛</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.user.weixin'})" href="/act/a20160425wxlol/" target="_blank">官方微信</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.user.weibo'})" href="http://weibo.com/lol" target="_blank">官方微博</a>
+                </li>
+                <li class="sub-nav-item">
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.match.lpl'})" target="_blank" href="/match/lpl/">LPL职业联赛</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.match.lspl'})" target="_blank" href="/match/lspl/">甲级职业联赛</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.match.demacia'})" target="_blank" href="/match/demacia/">德玛西亚杯</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.match.city'})" target="_blank" href="/match/city/">城市英雄争霸赛</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.match.campus'})" target="_blank" href="/match/lcl/">高校联赛</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.match.elcl'})" target="_blank" href="/match/elcl/">校际精英赛</a>
+                    <!--<a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.match.self'})" target="_blank" href="/act/a20150728rift/">王者峡谷</a>-->
+                </li>
+                <li class="sub-nav-item">
+                    <!--<a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.system.cafe'})" target="_blank" href="http://cafe.qq.com?ADTAG=cooperation.inner.lolweb"><i class="publicspr ico-n"></i>网吧特权</a>-->
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.system.fenghao'})" target="_blank" href="/act/a20151118fh/">封号查询</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.system.exp'})" target="_blank" href="/act/a20110907exp/">体验服申请</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.system.server'})" target="_blank" href="/act/a20150326dqpd/">服务器状态查询</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.system.justice'})" target="_blank" href="/act/a20160317sickle/">裁决之镰</a>
+                </li>
+                <li class="sub-nav-item">
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.personal.home'})" target="_blank" href="http://lol.qq.com/web201310/personal.shtml"><i class="publicspr ico-n"></i>个人资料</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.personal.skin'})" target="_blank" href="http://lol.qq.com/web201310/personal.shtml?1=1&showDiv=4">我的英雄与皮肤</a>
+                    <a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.personal.history'})" target="_blank" href="http://lol.qq.com/web201310/personal.shtml">战绩历史</a>
+                    <!--<a class="sub-nav-lnk" onclick="pgvSendClick({hottag:'header.subnav.personal.glory'})" target="_blank" href="">我的荣誉</a>-->
+                </li>
+            </ul>
+
+        </div>
+        <!--下拉子导航 E-->
+    </div>
+    <!--主导航 E-->
+
+
+    <div class="header-inner layout">
+        <!--logo S-->
+        <h1 class="logo"><a class="tnd" href="/">英雄联盟官网：英雄，一起去超越</a></h1>
+        <!--logo E-->
+
+        <!--当前活动 S-->
+        <video class="top-big-video" id="topBigVideo" autoplay loop>
+            <source src="http://ossweb-img.qq.com/images/lol/v1/banner/big-v12.webm" type="video/webm">
+            <source src="http://ossweb-img.qq.com/images/lol/v1/banner/big-v12.mp4" type="video/mp4">
+        </video>
+        <div class="top-act">
+            <h2 class="top-act-name">英雄联盟2016全明星赛<span>英雄联盟2016全明星赛</span></h2>
+            <p class="top-act-desc">比赛时间：2016年12月08日-2016年12月11日<br>比赛地点：西班牙-巴塞罗那</p>
+            <div class="top-act-video">
+                <video class="top-small-video" id="topSmallVideo" autoplay loop>
+                    <source src="http://ossweb-img.qq.com/images/lol/v1/banner/small-v12.webm" type="video/webm">
+                    <source src="http://ossweb-img.qq.com/images/lol/v1/banner/small-v12.mp4" type="video/mp4">
+                </video>
+                <a id="J_play" class="btn-top-play" href="javascript:void(0)"></a>
+            </div>
+            <a class="top-act-link" href="http://lol.qq.com/match/allstar/?ADTAG=lolweb.header.act" onclick="pgvSendClick({hottag:'header.activity.btn.link'})" target="_blank">查看详情</a>
+        </div>
+        <!--当前活动 E-->
+
+        <div class="top-version">当前游戏版本：<em>Ver 6.23.1</em> <a class="top-version-link" href="http://lol.qq.com/webplat/info/news_version3/152/22006/m14290/201611/528123.shtml" onclick="pgvSendClick({hottag:'header.version.btn.link'})" target="_blank">版本详情</a></div>
+        
+        <div class="top-quick clearfix">
+            <!--quick-nav S-->
+            <a class="top-quick-link top-quick-download" onclick="pgvSendClick({hottag:'header.quicknav.down'})" href="/download.shtml"><strong class="hidden">下载游戏</strong></a>
+            <a class="top-quick-link top-quick-package" onclick="pgvSendClick({hottag:'header.quicknav.gifts'})" target="_blank" href="http://lol.qq.com/act/a20110418gifts/"><span class="icon-quick-package"></span><span class="name">新手礼包</span><span class="desc">新手任务好礼</span></a>
+            <a class="top-quick-link top-quick-video" onclick="pgvSendClick({hottag:'header.quicknav.video'})" target="_blank" href="/v/"><span class="icon-quick-video"></span><span class="name">视频中心</span><span class="desc">最新最全视频</span></a>
+            <a class="top-quick-link top-quick-match" onclick="pgvSendClick({hottag:'header.quicknav.match'})" target="_blank" href="/match/"><span class="icon-quick-match"></span><span class="name">赛事中心</span><span class="desc">权威赛事数据</span></a>
+            <a class="top-quick-link top-quick-info" onclick="pgvSendClick({hottag:'header.quicknav.info'})" target="_blank" href="/web201310/info-heros.shtml"><span class="icon-quick-info"></span><span class="name">游戏资料</span><span class="desc">海量英雄资料</span></a>
+            <!--<a class="top-quick-link top-quick-personal" onclick="pgvSendClick({hottag:'header.quicknav.personal'})" target="_blank" href="/web201310/personal.shtml"><span class="icon-quick-personal"></span><span class="name">个人中心</span><span class="desc">权威个人数据</span></a>-->
+            <a class="top-quick-link top-quick-lcu" onclick="pgvSendClick({hottag:'header.quicknav.lcu'})" target="_blank" href="http://lol.qq.com/act/20160407lcu/index.shtml"><span class="icon-quick-lcu"></span><span class="name">新版客户端</span><span class="desc">用户体验升级</span></a>
+
+            <!--quick-nav E-->
+
+            <!--top-login S-->
+            <div class="top-login">
+                <div id="jUserLoginDiv" class="topunlogin">
+                    <div class="loginheader"><img src="picture/ttt.png" width="80" height="80"></div>
+                    <p id="jUserLoginP" class="un1">亲爱的召唤师，欢迎<a href="javascript:LW201310_Userinfo.userLogin();" class="a-in">登录</a></p>
+                    <i class="publicspr un0"></i>
+                    <p>登录后查看自己的英雄联盟游戏信息，包括<br><span class="un2">召唤师等级、段位信息、游戏胜场数、账户信息、声望值</span> 等。</p>
+                </div>
+                <div id="jUserLoginedDiv" class="clearfix toplogined" style="display:none">
+                    <div id="jUserIcon" class="loginheader"><i></i></div>
+                    <div class="loginname">
+                        <h4 id="jUserName"></h4>
+                        <p id="jUserArea" class="publicspr login-fwq">-</p>
+                        <a class="login-out lnk-normal" href="javascript:LW201310_Userinfo.userLogout();">注销</a>
+                    </div>
+                    <ul class="loginnumber">
+                        <li><em id="jUserRank">-</em>段位</li>
+                        <li><em id="jUserGames" class="cgreen">-</em>总场数</li>
+                        <li><em id="jUserRP">-</em>点券</li>
+                        <li><em id="jUserIP">-</em>金币</li>
+                        <li><em id="jUserRS">-</em>声望值</li>
+                    </ul>
+                </div>
+            </div>
+            <!--top-login E-->
+        </div>
+    </div>
+</div><!--[if !IE]>|xGv00|3d641671d34b6d7a8191a83ae41b5885<![endif]-->
+    <div class="layout mainer">
+
+    		<div class="home-mod-l">
+
+                <!--轮播 S-->
+                <div class="home-mod promo">
+                    <ul id="promoInner" class="promo-list">正在努力加载中...</ul>
+                    <div id="promoTrigger" class="promo-trigger"></div>
+                </div>
+                <!--轮播 E-->
+
+                <!--视频中心 S-->
+                <div class="home-mod home-video">
+                    <div class="hd">
+                        <h2 class="home-title home-video-title"><i class="icon-video"></i>视频中心</h2>
+                        <a href="/v/index.shtml" onclick="pgvSendClick({hottag:'main.video.btn.goInner'})" target="_blank" class="txt-more">进入视频中心</a>
+                        <a class="txt-more" href="http://bbs.lol.qq.com/forum.php?mod=forumdisplay&fid=315"  onclick="pgvSendClick({hottag:'main.video.btn.submit'})" target="_blank"><i class="icon-submit"></i>我要投稿</a>
+                    </div>
+                    <div class="bd">
+                        <div class="tab video-tab">
+                            <ul id="Jvideo" class="tab-nav video-nav">
+                                <li rel="_n1" class="current">最新视频</li>
+                                <li rel="_n2">解说视频</li>
+                                <li rel="_n3">周免英雄</li>
+                                <li rel="_n4">赛事视频</li>
+                                <li rel="_n5">趣味锦集</li>
+                                <li rel="_n6">官方视频</li>
+                            </ul>
+                        </div>
+                        <ul id="Jvideo_n1" data-id="2" class="clearfix v-list v-mod-list v-star-list" style="display:block">
+                            <li class="loading">最新视频加载中...</li>
+                        </ul>
+                        <ul id="Jvideo_n2" data-id="3" class="clearfix v-list v-mod-list v-star-list"><li class="loading">解说视频加载中...</li></ul>
+                        <ul id="Jvideo_n3" data-id="5" class="clearfix v-list v-mod-list v-star-list"><li class="loading">周免英雄加载中...</li></ul>
+                        <ul id="Jvideo_n4" data-id="4" class="clearfix v-list v-mod-list v-star-list"><li class="loading">赛事视频加载中...</li></ul>
+                        <ul id="Jvideo_n5" data-id="6" class="clearfix v-list v-mod-list v-star-list"><li class="loading">趣味锦集加载中...</li></ul>
+                        <ul id="Jvideo_n6" data-id="7" class="clearfix v-list v-mod-list v-star-list"><li class="loading">官方视频加载中...</li></ul>
+                        <a id="J_videoMore" class="video-more-link" href="javascript:void(0)">再显示<em>8</em>个视频</a>
+                        <a id="J_videoInner" class="video-more-link" href="/v/index.shtml" onclick="pgvSendClick({hottag:'main.video.btn.goInner2'})"  target="_blank" style="display: none">进入视频中心查看更多</a>
+                    </div>
+                </div>
+                <!--视频中心 E-->
+
+                <!--赛事中心 S-->
+                <div class="home-mod home-match">
+                    <div class="hd">
+                        <h2 class="home-title home-match-title"><i class="icon-match"></i>赛事中心</h2>
+                        <a href="http://lol.qq.com/match/" onclick="pgvSendClick({hottag:'main.match.goInner'})" target="_blank" class="txt-more">进入赛事中心</a>
+                    </div>
+                    <div class="bd">
+                        <div class="tab match-tab">
+                            <ul id="J_matchTab" class="tab-nav hero-nav">
+                                <li class="current">职业联赛</li>
+                                <li>甲级职业联赛</li>
+                                <li>德玛西亚杯</li>
+                                <li>高校联赛</li>
+                                <li>城市英雄争霸赛</li>
+                                <!--<li>QQ网吧联赛</li>-->
+                                <li>王者峡谷</li>
+                            </ul>
+                        </div>
+                        <div id="Jevent_n1" class="home-match-content" style="display:block">
+                            <div id="Jevent_n1_gg" class="home-match-side" rel="4677">职业联赛加载中
+                            </div>
+                            <div class="home-match-news">
+                                <div id="Jevent_n1_act" data-act="10797">职业联赛加载中</div>
+                                <ul id="Jevent_n1_inner" class="clearfix txtlist event-txtlist">
+                                    <li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5886/5887/m132/list_1.shtml" class="lnk-type">[赛事专区]</a><a href="/webplat/info/news_version3/152/5886/5887/m7085/201609/508238.shtml" class="lnk-tit" target="_blank" title="RNG.UZI：孤独行者的追梦路 一步三年">RNG.UZI：孤独行者的追梦路 一步三年</a>
+	<span class="date">09/22</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5886/5887/m132/list_1.shtml" class="lnk-type">[赛事专区]</a><a href="/webplat/info/news_version3/152/5886/5887/m7085/201609/507983.shtml" class="lnk-tit" target="_blank" title="从低谷重返巅峰 回顾EDG的两年坎坷路">从低谷重返巅峰 回顾EDG的两年坎坷路</a>
+	<span class="date">09/21</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5886/5887/m132/list_1.shtml" class="lnk-type">[赛事专区]</a><a href="/webplat/info/news_version3/152/5886/5887/m7085/201609/506425.shtml" class="lnk-tit" target="_blank" title="LPL夏季赛数据大揭密：一血王竟然是他？">LPL夏季赛数据大揭密：一血王竟然是他？</a>
+	<span class="date">09/15</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5886/5887/m132/list_1.shtml" class="lnk-type">[赛事专区]</a><a href="/webplat/info/news_version3/152/5886/5887/m7085/201609/504191.shtml" class="lnk-tit" target="_blank" title="2016全球总决赛：分组抽签入门指南">2016全球总决赛：分组抽签入门指南</a>
+	<span class="date">09/07</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5886/5887/m132/list_1.shtml" class="lnk-type">[赛事专区]</a><a href="/webplat/info/news_version3/152/5886/5887/m7085/201609/504190.shtml" class="lnk-tit" target="_blank" title="2016全球总决赛抽签仪式9月11日举行">2016全球总决赛抽签仪式9月11日举行</a>
+	<span class="date">09/07</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5886/5887/m132/list_1.shtml" class="lnk-type">[赛事专区]</a><a href="/webplat/info/news_version3/152/5886/5887/m7085/201609/504185.shtml" class="lnk-tit" target="_blank" title="什么是2016全球总决赛？">什么是2016全球总决赛？</a>
+	<span class="date">09/07</span>
+</li>
+<!--[if !IE]>|xGv00|26c2452dd79b9e6aadbdfe066679c97d<![endif]-->
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="Jevent_n6" class="home-match-content" style="display:none">
+                            <div id="Jevent_n6_gg" class="home-match-side" rel="6572">甲级联赛加载中...</div>
+                            <div class="home-match-news">
+                                <div id="Jevent_n6_act" data-act="11350">甲级联赛加载中...</div>
+                                <ul id="Jevent_n6_inner" class="clearfix txtlist event-txtlist">
+                                    <li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5848/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5849/201608/495232.shtml" class="lnk-tit" target="_blank" title="NBY顺利进军LPL YM难逃BO5魔咒憾负">NBY顺利进军LPL YM难逃BO5魔咒憾负</a>
+	<span class="date">08/09</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5848/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5849/201608/494925.shtml" class="lnk-tit" target="_blank" title="RVG惨遭降级命运 YM完胜皇族挺进决赛">RVG惨遭降级命运 YM完胜皇族挺进决赛</a>
+	<span class="date">08/09</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5848/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5849/201608/494622.shtml" class="lnk-tit" target="_blank" title="皇族技高一筹 力克LD挺进下轮">皇族技高一筹 力克LD挺进下轮</a>
+	<span class="date">08/08</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5848/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5849/201608/494336.shtml" class="lnk-tit" target="_blank" title="WYD完胜对手成功保级 TCS告别LSPL">WYD完胜对手成功保级 TCS告别LSPL</a>
+	<span class="date">08/07</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5848/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5849/201608/494297.shtml" class="lnk-tit" target="_blank" title="2016LSPL夏季赛季后赛今日打响！">2016LSPL夏季赛季后赛今日打响！</a>
+	<span class="date">08/06</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5848/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7320/7321/7322/7324/m5849/201608/493996.shtml" class="lnk-tit" target="_blank" title="2016LSPL季后赛巡礼：Doinb再度冲击LPL">2016LSPL季后赛巡礼：Doinb再度冲击LPL</a>
+	<span class="date">08/05</span>
+</li>
+<!--[if !IE]>|xGv00|20deeb769b5bf140b63562442603a141<![endif]-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="Jevent_n2" class="home-match-content" style="display:none">
+                            <div id="Jevent_n2_gg" class="home-match-side" rel="6262">德玛西亚杯加载中...</div>
+                            <div class="home-match-news">
+                                <div id="Jevent_n2_act" data-act="10985">德玛西亚杯加载中...</div>
+                                <ul id="Jevent_n2_inner" class="clearfix txtlist event-txtlist">
+                                    <li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7186/11381/11382/m8841/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7186/11381/11382/m8842/201611/522858.shtml" class="lnk-tit" target="_blank" title="2016颁奖盛典落幕 EDG摘下德杯五连冠">2016颁奖盛典落幕 EDG摘下德杯五连冠</a>
+	<span class="date">11/14</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7186/11381/11382/m8841/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7186/11381/11382/m8842/201611/522833.shtml" class="lnk-tit" target="_blank" title="2016年度颁奖盛典奖项揭晓">2016年度颁奖盛典奖项揭晓</a>
+	<span class="date">11/13</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7186/11381/11382/m8841/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7186/11381/11382/m8842/201611/522827.shtml" class="lnk-tit" target="_blank" title="Remember荣获年度最佳新人解说">Remember荣获年度最佳新人解说</a>
+	<span class="date">11/13</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7186/11381/11382/m8841/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7186/11381/11382/m8842/201611/522820.shtml" class="lnk-tit" target="_blank" title="2016年度颁奖盛典年度最佳阵容公布">2016年度颁奖盛典年度最佳阵容公布</a>
+	<span class="date">11/13</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7186/11381/11382/m8841/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7186/11381/11382/m8842/201611/522818.shtml" class="lnk-tit" target="_blank" title="2016年度颁奖盛典进步最快俱乐部：IM">2016年度颁奖盛典进步最快俱乐部：IM</a>
+	<span class="date">11/13</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/7186/11381/11382/m8841/list_1.shtml" class="lnk-type">[赛事新闻]</a><a href="/webplat/info/news_version3/152/7186/11381/11382/m8842/201611/522817.shtml" class="lnk-tit" target="_blank" title="2016年度颁奖盛典最佳外援：Athena">2016年度颁奖盛典最佳外援：Athena</a>
+	<span class="date">11/13</span>
+</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="Jevent_n3" class="home-match-content" style="display:none">
+                            <div id="Jevent_n3_gg" class="home-match-side" rel="4676">高校联赛加载中...</div>
+                            <div class="home-match-news">
+                                <div id="Jevent_n3_act" data-act="10796">高校联赛加载中...</div>
+                                <ul id="Jevent_n3_inner" class="clearfix txtlist event-txtlist">
+                                    <li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5730/18191/18192/m13034/list_1.shtml" class="lnk-type">[新闻]</a><a href="/webplat/info/news_version3/152/5730/18191/18192/m13346/201511/396182.shtml" class="lnk-tit" target="_blank" title="英雄联盟用户调查问卷">英雄联盟用户调查问卷</a>
+	<span class="date">11/06</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5730/18191/18192/m13034/list_1.shtml" class="lnk-type">[新闻]</a><a href="/webplat/info/news_version3/152/5730/18191/18192/m13346/201611/521928.shtml" class="lnk-tit" target="_blank" title="国际高校冠军赛的微访谈问答回顾">国际高校冠军赛的微访谈问答回顾</a>
+	<span class="date">11/09</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5730/18191/18192/m13034/list_1.shtml" class="lnk-type">[新闻]</a><a href="/webplat/info/news_version3/152/5730/18191/18192/m13346/201611/518893.shtml" class="lnk-tit" target="_blank" title="第五届全国高校联赛公开海选赛，火热来袭！">第五届全国高校联赛公开海选赛，火热来袭！</a>
+	<span class="date">11/01</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5730/18191/18192/m13034/list_1.shtml" class="lnk-type">[新闻]</a><a href="/webplat/info/news_version3/152/5730/18191/18192/m13346/201610/518565.shtml" class="lnk-tit" target="_blank" title="2016国际高校冠军赛分组及赛程结果公布">2016国际高校冠军赛分组及赛程结果公布</a>
+	<span class="date">10/31</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5730/18191/18192/m13034/list_1.shtml" class="lnk-type">[新闻]</a><a href="/webplat/info/news_version3/152/5730/18191/18192/m13346/201610/517876.shtml" class="lnk-tit" target="_blank" title="《英雄联盟》2016国际高校冠军赛即将开战！">《英雄联盟》2016国际高校冠军赛即将开战！</a>
+	<span class="date">10/28</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/5730/18191/18192/m13034/list_1.shtml" class="lnk-type">[新闻]</a><a href="/webplat/info/news_version3/152/5730/18191/18192/m13346/201609/508561.shtml" class="lnk-tit" target="_blank" title="等你们来战！第五届全国高校联赛今日开幕">等你们来战！第五届全国高校联赛今日开幕</a>
+	<span class="date">09/23</span>
+</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="Jevent_n4" class="home-match-content" style="display:none">
+                            <div id="Jevent_n4_gg" class="home-match-side" rel="927">城市争霸赛加载中...</div>
+                            <div class="home-match-news">
+                                <div id="Jevent_n4_act" data-act="10790">城市争霸赛加载中...</div>
+                                <ul id="Jevent_n4_inner" class="clearfix txtlist event-txtlist">
+                                    <li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/4594/4595/m3108/list_1.shtml" class="lnk-type">[综合]</a><a href="/webplat/info/news_version3/152/4594/4595/m3109/201511/396184.shtml" class="lnk-tit" target="_blank" title="英雄联盟用户调查问卷">英雄联盟用户调查问卷</a>
+	<span class="date">11/06</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/4594/4595/m3108/list_1.shtml" class="lnk-type">[综合]</a><a href="/webplat/info/news_version3/152/4594/4595/m3109/201611/528995.shtml" class="lnk-tit" target="_blank" title="LOL江苏省城市冠军联赛海选赛打响">LOL江苏省城市冠军联赛海选赛打响</a>
+	<span class="date">11/29</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/4594/4595/m3108/list_1.shtml" class="lnk-type">[综合]</a><a href="/webplat/info/news_version3/152/4594/4595/m3109/201611/524895.shtml" class="lnk-tit" target="_blank" title="城市赛总决赛首日：EDG教练出现赛场">城市赛总决赛首日：EDG教练出现赛场</a>
+	<span class="date">11/18</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/4594/4595/m3108/list_1.shtml" class="lnk-type">[综合]</a><a href="/webplat/info/news_version3/152/4594/4595/m3109/201611/524128.shtml" class="lnk-tit" target="_blank" title="左雾专访：对于Snake，这是梦开始的地方">左雾专访：对于Snake，这是梦开始的地方</a>
+	<span class="date">11/16</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/4594/4595/m3108/list_1.shtml" class="lnk-type">[综合]</a><a href="/webplat/info/news_version3/152/4594/4595/m3109/201611/521877.shtml" class="lnk-tit" target="_blank" title="第11届城市英雄争霸赛总决赛分组及赛程出炉">第11届城市英雄争霸赛总决赛分组及赛程出炉</a>
+	<span class="date">11/09</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/4594/4595/m3108/list_1.shtml" class="lnk-type">[综合]</a><a href="/webplat/info/news_version3/152/4594/4595/m3109/201608/496822.shtml" class="lnk-tit" target="_blank" title="战火席卷全国 城市英雄争霸赛火热进行">战火席卷全国 城市英雄争霸赛火热进行</a>
+	<span class="date">08/15</span>
+</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!--<div id="Jevent_n5" class="home-match-content" style="display:none">-->
+                            <!--<div id="Jevent_n5_gg" class="home-match-side" rel="929">QQ网吧联赛加载中...</div>-->
+                            <!--<div class="home-match-news">-->
+                                <!--<div id="Jevent_n5_act" data-act="10787">QQ网吧联赛加载中...</div>-->
+                                <!--<ul id="Jevent_n5_inner" class="clearfix txtlist event-txtlist">-->
+                                    <!--&lt;!&ndash;#include virtual="/webplat/info/news_version3/152/4627/4628/m15740/index.shtml"&ndash;&gt;-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div id="Jevent_n7" class="home-match-content" style="display:none">
+                            <div id="Jevent_n7_gg" class="home-match-side" rel="10400">王者峡谷加载中...</div>
+                            <div class="home-match-news">
+                                <div id="Jevent_n7_act" data-act="13695">王者峡谷加载中...</div>
+                                <ul id="Jevent_n7_inner" class="clearfix txtlist event-txtlist">
+                                    <li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/8435/17210/17211/m12566/list_1.shtml" class="lnk-type">[公告]</a><a href="/webplat/info/news_version3/152/8435/17210/17211/m12568/201610/517923.shtml" class="lnk-tit" target="_blank" title="王者峡谷全民线赛现金奖励发放延期">王者峡谷全民线赛现金奖励发放延期</a>
+	<span class="date">10/28</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/8435/17210/17211/m12566/list_1.shtml" class="lnk-type">[公告]</a><a href="/webplat/info/news_version3/152/8435/17210/17211/m12568/201610/513814.shtml" class="lnk-tit" target="_blank" title="全民线上海选赛奖励发放">全民线上海选赛奖励发放</a>
+	<span class="date">10/13</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/8435/17210/17211/m12566/list_1.shtml" class="lnk-type">[公告]</a><a href="/webplat/info/news_version3/152/8435/17210/17211/m12568/201609/506477.shtml" class="lnk-tit" target="_blank" title="《王者峡谷》全民线上海选赛圆满结束">《王者峡谷》全民线上海选赛圆满结束</a>
+	<span class="date">09/16</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/8435/17210/17211/m12566/list_1.shtml" class="lnk-type">[公告]</a><a href="/webplat/info/news_version3/152/8435/17210/17211/m12568/201606/473458.shtml" class="lnk-tit" target="_blank" title="《王者峡谷》全民线上海选赛报名开启">《王者峡谷》全民线上海选赛报名开启</a>
+	<span class="date">06/08</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/8435/17210/17211/m12566/list_1.shtml" class="lnk-type">[公告]</a><a href="/webplat/info/news_version3/152/8435/17210/17211/m12568/201601/429708.shtml" class="lnk-tit" target="_blank" title="王者峡谷线上冠军锦标赛奖励发放公告">王者峡谷线上冠军锦标赛奖励发放公告</a>
+	<span class="date">01/29</span>
+</li>
+<li class="txtlist-nape">
+	<a href="/webplat/info/news_version3/152/8435/17210/17211/m12566/list_1.shtml" class="lnk-type">[公告]</a><a href="/webplat/info/news_version3/152/8435/17210/17211/m12568/201601/423889.shtml" class="lnk-tit" target="_blank" title="线上冠军锦标赛第9轮开启">线上冠军锦标赛第9轮开启</a>
+	<span class="date">01/13</span>
+</li>
+<!--[if !IE]>|xGv00|b9152770119406618558721d83db63cb<![endif]-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--赛事中心 E-->
+
+                <!--在线客服 S-->
+                <div class="home-online">
+                    <div class="hd">
+                        <h2 class="home-title home-online-title"><i class="icon-online"></i>客服专区</h2>
+                        <a class="more home-online-more" href="/webplat/info/news_version3/152/7134/7136/m5579/list_1.shtml" onclick="pgvSendClick({hottag:'main.online.btn.more'})" target="_blank">more</a>
+                        <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=40012345&f=1&ty=1&ap=000011:400998:|m:11|f:Gyxlm3" onclick="pgvSendClick({hottag:'main.online.btn.link'})" target="_blank" class="txt-more">QQ在线客服</a>
+                    </div>
+                    <div class="bd">
+                        <div class="tab online-tab">
+                            <ul id="J_onlineTab" class="tab-nav online-nav">
+                                <li class="current">自助服务</li>
+                                <li>常见问题列表</li>
+                            </ul>
+                            <div class="online-other">
+                                <a href="http://lol.qq.com/webplat/info/news_version3/152/7134/7135/m5580/201510/393481.shtml" onclick="pgvSendClick({hottag:'main.online.right.link1'})" target="_blank">登录相关</a>
+                                <a href="http://lol.qq.com/webplat/info/news_version3/152/7134/7135/m5580/201312/240370.shtml"  onclick="pgvSendClick({hottag:'main.online.right.link2'})" target="_blank">游戏相关</a>
+                                <a href="http://lol.qq.com/webplat/info/news_version3/152/7134/7135/m5580/201312/240378.shtml"  onclick="pgvSendClick({hottag:'main.online.right.link3'})" target="_blank">电脑及其他问题</a>
+                            </div>
+                        </div>
+                        <ul id="J_onlineContent" class="fl w100 kf-txtlist">
+                            <li id="fkNAV_n1" style="display:block">
+                                <ul id="fkNAV_n1_inner" class="clearfix">
+                                    <li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7136/m5580/201611/521910.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）晋级助手">英雄联盟（LOL）晋级助手</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7136/m5580/201611/521909.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）封号申诉相关问题">英雄联盟（LOL）封号申诉相关问题</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7136/m5580/201611/521908.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）如何查看皮肤特效">英雄联盟（LOL）如何查看皮肤特效</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7136/m5580/201611/521906.shtml" class="lnk-tit" target="_blank" title="新版本匹配机制FAQ">新版本匹配机制FAQ</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7136/m5580/201611/521905.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）限定皮肤获得方法">英雄联盟（LOL）限定皮肤获得方法</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7136/m5580/201611/521904.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）常见规则">英雄联盟（LOL）常见规则</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7136/m5580/201611/521903.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）点券充错大区了怎么办？">英雄联盟（LOL）点券充错大区了怎么办？</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7136/m5580/201611/521902.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）游戏商城黑屏">英雄联盟（LOL）游戏商城黑屏</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7136/m5580/201611/521901.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）聊天框弹出中奖信息/举报虚假信息的说明">英雄联盟（LOL）聊天框弹出中奖信息/举报虚假信息的说明</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7136/m5580/201611/521900.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）对电脑配置有什么要求？">英雄联盟（LOL）对电脑配置有什么要求？</a>
+</li>
+
+                                </ul>
+                            </li>
+                            <li id="fkNAV_n2" style="display:none">
+                                <ul id="fkNAV_n2_inner" class="clearfix">
+                                    <li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7135/m5580/201611/521897.shtml" class="lnk-tit" target="_blank" title="英雄联盟冲值充错大区了怎么办？【该自助工具目前无法使用】">英雄联盟冲值充错大区了怎么办？【该自助工具目前无法使用】</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7135/m5580/201611/521896.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）排位赛/晋级赛（胜点、段位、级位）扣分规则">英雄联盟（LOL）排位赛/晋级赛（胜点、段位、级位）扣分规则</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7135/m5580/201611/521895.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）登录提示“登录错误，登录服务器未响">英雄联盟（LOL）登录提示“登录错误，登录服务器未响</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7135/m5580/201611/521894.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）登录成功后提示：服务器连接异常，即将退出">英雄联盟（LOL）登录成功后提示：服务器连接异常，即将退出</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7135/m5580/201611/521893.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）PVP.NET断开连接的处理方法">英雄联盟（LOL）PVP.NET断开连接的处理方法</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7135/m5580/201611/521892.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）登录成功后提示：未知错误，未知的错误发生了">英雄联盟（LOL）登录成功后提示：未知错误，未知的错误发生了</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7135/m5580/201611/521891.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）登录时发生ActionScript错误">英雄联盟（LOL）登录时发生ActionScript错误</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7135/m5580/201611/521890.shtml" class="lnk-tit" target="_blank" title="英雄联盟（LOL）Adobe Air 错误提示">英雄联盟（LOL）Adobe Air 错误提示</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7135/m5580/201611/521889.shtml" class="lnk-tit" target="_blank" title="登录时，提示：服务器正忙，请稍后再试（登录错误）">登录时，提示：服务器正忙，请稍后再试（登录错误）</a>
+</li>
+<li class="txtlist-nape">
+	<i class="ico-num"></i>
+	<a href="/webplat/info/news_version3/152/7134/7135/m5580/201611/521888.shtml" class="lnk-tit" target="_blank" title="拉起游戏时提示：连接失败，无法连接服务器">拉起游戏时提示：连接失败，无法连接服务器</a>
+</li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--在线客服 E-->
+
+            </div>
+    		<div class="home-mod-r">
+                <!--新闻公告 S-->
+                <div class="home-mod  home-news">
+                    <div class="tab news-top">
+                        <ul id="J_newsTab" class="tab-nav news-nav">
+                            <li class="current">综合</li>
+                            <li>公告</li>
+                            <li>赛事</li>
+                            <li>论坛</li>
+                        </ul>
+                        <a class="more" href="http://lol.qq.com/webplat/info/news_version3/152/4579/m5583/list_1.shtml" onclick="pgvSendClick({hottag:'main.news.btn.more'})" target="_blank">more</a>
+                    </div>
+                    <div id="J_newsContent" class="news-list">
+                        <div class="news-content" style="display:block">
+                            <ul id="Jnews_n1_inner" class="clearfix txtlist">
+                                <li class="first">
+    <a href="/webplat/info/news_version3/152/4579/4580/m3106/201612/531411.shtml" class="lnk-tit" title="疯魔来临！全明星明日23点开战" onclick="pgvSendClick({hottag:'main.news.all.531411'})" target="_blank">疯魔来临！全明星明日23点开战</a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4580/m3106/201612/529693.shtml" class="lnk-tit" title="英雄剖析：卡蜜尔" onclick="pgvSendClick({hottag:'main.news.all.529693'})" target="_blank"><span class="new-type">新闻</span>英雄剖析：卡蜜尔<span class="date">12/06</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4580/m3106/201612/531590.shtml" class="lnk-tit" title="12月9日免费英雄更换公告" onclick="pgvSendClick({hottag:'main.news.all.531590'})" target="_blank"><span class="new-type">新闻</span>12月9日免费英雄更换公告<span class="date">12/07</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4580/m3106/201612/531292.shtml" class="lnk-tit" title="2016《英雄联盟》全球总决赛观赛数据公布" onclick="pgvSendClick({hottag:'main.news.all.531292'})" target="_blank"><span class="new-type">新闻</span>2016《英雄联盟》全球总决赛观赛数据公布<span class="date">12/07</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4580/m3106/201612/531230.shtml" class="lnk-tit" title="征战新赛季，网吧特权奖励来袭！" onclick="pgvSendClick({hottag:'main.news.all.531230'})" target="_blank"><span class="new-type">新闻</span>征战新赛季，网吧特权奖励来袭！<span class="date">12/06</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4580/m3106/201612/531141.shtml" class="lnk-tit" title="meiko首秀！全明星赛解说阵容公布" onclick="pgvSendClick({hottag:'main.news.all.531141'})" target="_blank"><span class="new-type">新闻</span>meiko首秀！全明星赛解说阵容公布<span class="date">12/06</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4580/m3106/201612/530933.shtml" class="lnk-tit" title="全明星将成MataUZI组合最后一战" onclick="pgvSendClick({hottag:'main.news.all.530933'})" target="_blank"><span class="new-type">新闻</span>全明星将成MataUZI组合最后一战<span class="date">12/06</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4580/m3106/201612/530723.shtml" class="lnk-tit" title="2016全明星战队头像限时销售" onclick="pgvSendClick({hottag:'main.news.all.530723'})" target="_blank"><span class="new-type">新闻</span>2016全明星战队头像限时销售<span class="date">12/05</span></a>
+</li>
+
+                            </ul>
+                        </div>
+                        <div class="news-content" style="display:none">
+                            <ul id="Jnews_n2_inner" class="clearfix txtlist">
+                                <!--<li rel="/webplat/info/news_version3/152/4579/4581/m9029/index.js">公告加载中...</li>-->
+                                <li class="first">
+    <a href="/webplat/info/news_version3/152/4579/4581/m3106/201612/531590.shtml" class="lnk-tit" title="12月9日免费英雄更换公告" onclick="pgvSendClick({hottag:'main.news.announcement.531590'})" target="_blank">12月9日免费英雄更换公告</a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4581/m3106/201612/531344.shtml" class="lnk-tit" title="网通大区网络波动公告"  onclick="pgvSendClick({hottag:'main.news.announcement.531344'})" target="_blank"><span class="new-type">公告</span>网通大区网络波动公告<span class="date">12/07</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4581/m3106/201612/531175.shtml" class="lnk-tit" title="12月7日卡拉曼达大区战绩系统维护公告"  onclick="pgvSendClick({hottag:'main.news.announcement.531175'})" target="_blank"><span class="new-type">公告</span>12月7日卡拉曼达大区战绩系统维护公告<span class="date">12/06</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4581/m3106/201612/530644.shtml" class="lnk-tit" title="新版客户端体验服测试关闭公告"  onclick="pgvSendClick({hottag:'main.news.announcement.530644'})" target="_blank"><span class="new-type">公告</span>新版客户端体验服测试关闭公告<span class="date">12/05</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4581/m3106/201612/530123.shtml" class="lnk-tit" title="部分电信大区网络波动公告"  onclick="pgvSendClick({hottag:'main.news.announcement.530123'})" target="_blank"><span class="new-type">公告</span>部分电信大区网络波动公告<span class="date">12/03</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4581/m3106/201611/528893.shtml" class="lnk-tit" title="12月2日免费英雄更换公告"  onclick="pgvSendClick({hottag:'main.news.announcement.528893'})" target="_blank"><span class="new-type">公告</span>12月2日免费英雄更换公告<span class="date">11/30</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4581/m3106/201611/528762.shtml" class="lnk-tit" title="“新版客户端”测试大区开启公告"  onclick="pgvSendClick({hottag:'main.news.announcement.528762'})" target="_blank"><span class="new-type">公告</span>“新版客户端”测试大区开启公告<span class="date">11/30</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4581/m3106/201611/528623.shtml" class="lnk-tit" title="新版客户端LCU修复完成公告"  onclick="pgvSendClick({hottag:'main.news.announcement.528623'})" target="_blank"><span class="new-type">公告</span>新版客户端LCU修复完成公告<span class="date">11/29</span></a>
+</li>
+
+
+                            </ul>
+                        </div>
+                        <div class="news-content" style="display:none">
+                            <ul id="Jnews_n3_inner" class="clearfix txtlist">
+                                <!--<li rel="/webplat/info/news_version3/152/4579/4584/m9035/index.js">赛事加载中...</li>-->
+                                <li class="first">
+    <a href="/webplat/info/news_version3/152/4579/4584/m3106/201612/531411.shtml" class="lnk-tit" title="疯魔来临！全明星明日23点开战" onclick="pgvSendClick({hottag:'main.news.match.531411'})"  target="_blank">疯魔来临！全明星明日23点开战</a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4584/m3106/201612/531410.shtml" class="lnk-tit" title="2016全球总决赛：数字的故事" onclick="pgvSendClick({hottag:'main.news.match.531410'})"  target="_blank"><span class="new-type">赛事</span>2016全球总决赛：数字的故事<span class="date">12/07</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4584/m3106/201612/531141.shtml" class="lnk-tit" title="meiko首秀！全明星赛解说阵容公布" onclick="pgvSendClick({hottag:'main.news.match.531141'})"  target="_blank"><span class="new-type">赛事</span>meiko首秀！全明星赛解说阵容公布<span class="date">12/06</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4584/m3106/201612/531133.shtml" class="lnk-tit" title="2016赛季全明星赛规则" onclick="pgvSendClick({hottag:'main.news.match.531133'})"  target="_blank"><span class="new-type">赛事</span>2016赛季全明星赛规则<span class="date">12/06</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4584/m3106/201612/530933.shtml" class="lnk-tit" title="全明星将成MataUZI组合最后一战" onclick="pgvSendClick({hottag:'main.news.match.530933'})"  target="_blank"><span class="new-type">赛事</span>全明星将成MataUZI组合最后一战<span class="date">12/06</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4584/m3106/201612/530723.shtml" class="lnk-tit" title="2016全明星战队头像限时销售" onclick="pgvSendClick({hottag:'main.news.match.530723'})"  target="_blank"><span class="new-type">赛事</span>2016全明星战队头像限时销售<span class="date">12/05</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4584/m3106/201612/530569.shtml" class="lnk-tit" title="疯魔一刻：激情瞬间" onclick="pgvSendClick({hottag:'main.news.match.530569'})"  target="_blank"><span class="new-type">赛事</span>疯魔一刻：激情瞬间<span class="date">12/05</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4584/m3106/201612/530554.shtml" class="lnk-tit" title="疯狂一波!全明星赛娱乐赛模式揭秘！" onclick="pgvSendClick({hottag:'main.news.match.530554'})"  target="_blank"><span class="new-type">赛事</span>疯狂一波!全明星赛娱乐赛模式揭秘！<span class="date">12/05</span></a>
+</li>
+
+
+                            </ul>
+                        </div>
+                        <div class="news-content" style="display:none">
+                            <ul id="Jnews_n4_inner" class="clearfix txtlist">
+                                <!--<li rel="/webplat/info/news_version3/152/4579/4583/m9034/index.js">论坛加载中...</li>-->
+                                <li class="first">
+    <a href="/webplat/info/news_version3/152/4579/4583/m3106/201612/531607.shtml" class="lnk-tit" title="不如跳舞？职业翻车flag已立" onclick="pgvSendClick({hottag:'main.news.bbs.531607'})"  target="_blank">不如跳舞？职业翻车flag已立</a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4583/m3106/201612/531606.shtml" class="lnk-tit" title="当LOL遇上你的名字，会擦出怎样的火花" onclick="pgvSendClick({hottag:'main.news.bbs.531606'})"  target="_blank"><span class="new-type">论坛</span>当LOL遇上你的名字，会擦出怎样的火花<span class="date">12/07</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4583/m3106/201612/531605.shtml" class="lnk-tit" title="【哈撒给日记】蠢萌亚索的逗比日常" onclick="pgvSendClick({hottag:'main.news.bbs.531605'})"  target="_blank"><span class="new-type">论坛</span>【哈撒给日记】蠢萌亚索的逗比日常<span class="date">12/07</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4583/m3106/201612/531604.shtml" class="lnk-tit" title="【话题】版本最热英雄，各位置大盘点。" onclick="pgvSendClick({hottag:'main.news.bbs.531604'})"  target="_blank"><span class="new-type">论坛</span>【话题】版本最热英雄，各位置大盘点。<span class="date">12/07</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4583/m3106/201612/531602.shtml" class="lnk-tit" title="骚男暖冬小棉袄，deft奇思妙想省下千元" onclick="pgvSendClick({hottag:'main.news.bbs.531602'})"  target="_blank"><span class="new-type">论坛</span>骚男暖冬小棉袄，deft奇思妙想省下千元<span class="date">12/07</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4583/m3106/201612/531344.shtml" class="lnk-tit" title="网通大区网络波动公告" onclick="pgvSendClick({hottag:'main.news.bbs.531344'})"  target="_blank"><span class="new-type">论坛</span>网通大区网络波动公告<span class="date">12/07</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4583/m3106/201612/530123.shtml" class="lnk-tit" title="部分电信大区网络波动公告" onclick="pgvSendClick({hottag:'main.news.bbs.530123'})"  target="_blank"><span class="new-type">论坛</span>部分电信大区网络波动公告<span class="date">12/03</span></a>
+</li>
+<li class="news-item">
+    <a href="/webplat/info/news_version3/152/4579/4583/m3106/201612/530068.shtml" class="lnk-tit" title="蒸汽实验一探究竟：移动小龙尽然是她" onclick="pgvSendClick({hottag:'main.news.bbs.530068'})"  target="_blank"><span class="new-type">论坛</span>蒸汽实验一探究竟：移动小龙尽然是她<span class="date">12/03</span></a>
+</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="vote-tips"><a id="J_voteTips"  href="" onclick="pgvSendClick({hottag:'main.news.btn.survey'})" target="_blank">【调研】留下你的意见，我们会做得更好！</a></p>
+                </div>
+                <!--新闻公告 E-->
+
+                <!--英雄/皮肤 S-->
+                <div class="home-mod home-hero">
+                    <div class="hd">
+                        <h2 class="home-title home-hero-title"><i class="icon-hero"></i>英雄/皮肤</h2>
+                        <a href="/web201310/personal.shtml" onclick="pgvSendClick({hottag:'main.hero.btn.myskin'})" target="_blank" class="txt-more">我的英雄与皮肤</a>
+                        <a href="/web201310/info-heros.shtml" onclick="pgvSendClick({hottag:'main.hero.btn.allhero'})" target="_blank" class="txt-more">全部英雄</a>
+                    </div>
+                    <div class="bd">
+                        <div class="tab hero-tab">
+                            <ul id="J_heroTab" class="tab-nav hero-nav">
+                                <li class="current">周免英雄</li>
+                                <li>最新英雄</li>
+                                <li>最新皮肤</li>
+                            </ul>
+                        </div>
+                        <div class="hero-content hero-free" style="display: block">
+                            <div id="J_freeList" class="free-list clearfix">加载中...</div>
+                            <div id="J_freeDate" class="free-time"></div>
+                        </div>
+                        <div class="hero-content hero-new" style="display: none">
+                            <div id="J_heroNew" class="hero-new-list clearfix">
+                                加载中...
+                            </div>
+                        </div>
+                        <div class="hero-content hero-skin" style="display: none">
+                            <div id="J_skinNew" class="hero-new-list hero-skin-list clearfix">
+                                加载中...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--英雄/皮肤 E-->
+
+                <!--快速入口 S-->
+                <div class="home-mod home-quick">
+                    <div class="hd">
+                        <h2 class="home-title home-quick-title"><i class="icon-quick"></i>快速入口</h2>
+                    </div>
+                    <div class="bd">
+                        <div class="home-quick-content">
+                            <a href="/act/a20110613icon/" target="_blank" onclick="pgvSendClick({hottag:'main.quick.icon'})"><i class="icon-quick-icon"></i>点亮图标</a>
+                            <a href="/rs/" target="_blank" onclick="pgvSendClick({hottag:'main.quick.popularity'})"><i class="icon-quick-popularity"></i>声望系统</a>
+                            <a href="/web201310/cdkey.shtml" target="_blank" onclick="pgvSendClick({hottag:'main.quick.cdk'})"><i class="icon-quick-cdk"></i>CDK兑换</a>
+                            <a href="/act/a20160412rgm/" target="_blank" onclick="pgvSendClick({hottag:'main.quick.style'})"><i class="icon-quick-style"></i>模式实验室</a>
+                            <a href="/web201310/info-heros.shtml" target="_blank" onclick="pgvSendClick({hottag:'main.quick.gameinfo'})"><i class="icon-quick-gameinfo"></i>游戏资料</a>
+                            <a href="http://weibo.com/lol" target="_blank" onclick="pgvSendClick({hottag:'main.quick.weibo'})"><i class="icon-quick-weibo"></i>官方微博</a>
+                            <!--<a href="/act/a20120723awards/" target="_blank" onclick="pgvSendClick({hottag:'main.quick.reward'})"><i class="icon-quick-reward"></i>领奖中心</a>-->
+                            <a href="http://bbs.lol.qq.com/forum.php" target="_blank" onclick="pgvSendClick({hottag:'main.quick.bbs'})"><i class="icon-quick-bbs"></i>玩家论坛</a>
+                            <a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=40012345&f=1&ty=1&ap=000011:400998:|m:11|f:Gyxlm3" target="_blank" onclick="pgvSendClick({hottag:'main.quick.online'})"><i class="icon-quick-online"></i>在线客服</a>
+                        </div>
+                    </div>
+                </div>
+                <!--快速入口 E-->
+
+                <!--活动中心 S-->
+                <div class="home-mod home-activity">
+                    <div class="hd">
+                        <h2 class="home-title home-activity-title"><i class="icon-activity"></i>活动中心</h2>
+                        <a href="/web201310/active.shtml" onclick="pgvSendClick({hottag:'main.activity.btn.more'})" target="_blank" class="txt-more">进入活动中心</a>
+                    </div>
+                    <div class="bd">
+                        <ul id="ActiconlistMain_n1" data-num="1,1" style="display:block" class="fl act-list main-actlist">
+                            <li class="loading">活动中心加载中...</li>
+                        </ul>
+                        <ul id="ActiconlistMain_n2" class="fr txtlist act-txtlist">
+                            <li class="loading">活动中心加载中...</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--活动中心 E-->
+
+                <!--底部广告 S-->
+                <div class="home-ad">
+                    <div class="subgimg">
+                        <a onclick="pgvSendClick({hottag:'main.single.qtGo'});EAS.ADClick('http://qt.qq.com/go.html?roomid=101&amp;atm_cl=ad&amp;atm_pos=931&amp;e_code=162417');" target="_blank" href="http://qt.qq.com/go.html?roomid=101&amp;atm_cl=ad&amp;atm_pos=931&amp;e_code=162417"><img alt="" src="picture/pic-qt.jpg" width="400" height="90"></a>
+                        <!--<li id="subgImg2"></li>-->
+                    </div>
+                </div>
+                <!--底部广告 E-->
+
+            </div>
+
+    </div>
+
+    <div class="appfix side-tips">
+        <a href="http://lol.qq.com/app/?atm_cl=ctips&atm_pos=6411" target="_blank" onclick="pgvSendClick({hottag:'main.app.btn'});"><img src="picture/ewm_right.png">下载掌上英雄联盟</a>
+    </div>
+
+    <!--<div id="J_sideTips"  class="side-tips-2 side-tips">-->
+        <!--<a class="btn-tips-link" href="http://lol.qq.com/act/a20160828fighting/?ADTAG=lolweb.main.tips" target="_blank" onclick="pgvSendClick({hottag:'main.side.tips.link'});"></a>-->
+        <!--<a class="side-tips-close" href="javascript:" onclick="document.getElementById('J_sideTips').style.display = 'none';pgvSendClick({hottag:'main.side.tips.close'});">&times;</a>-->
+    <!--</div>-->
+
+
+
+    <div id="setNum" data-num="0" data-link="http://lol.qq.com/act/a20160407ymy/index.htm?iSurveyId=1" data-pic="" style="display:none;"></div>
+<!--[if !IE]>|xGv00|40ba3054c770573136a284a1231dbded<![endif]-->
+
+
+<!-- 视频弹窗 S -->
+<div id="Video" class="pop-top-video" style="display:none">
+    <div id="VideoContent">加载中...</div>
+    <a href="javascript:hidDialogs()" class="pop-close">&times;</a>
+</div>
+<!-- 视频弹窗 E -->
+
+<div id="footer" class="footer">
+    <div class="footer-inner layout clearfix">
+        <div class="footer-normal footer-weixin"><i class="footspr lo"></i>
+            <p class="fb">英雄，我们在这里等你</p>
+            <p>扫描下载《英雄联盟》官方APP，<br>获取最新最全的官方动态</p>
+        </div>
+        <div class="footer-normal">
+            <p class="fb"> 温馨提示：本游戏适合18岁(含)以上玩家娱乐</p>
+            <ul class="footer-rule"><li>抵制不良游戏</li><li>拒绝盗版游戏</li><li>注意自我保护</li><li>谨防受骗上当</li><li>适度游戏益脑</li><li>沉迷游戏伤身</li><li>合理安排时间</li><li>享受健康生活</li>
+            </ul>
+        </div>
+        <div class="footer-mt">
+            <div id="FooterLNK" class="footer-mt-lnk"><span class="fl">英雄联盟 官方合作媒体</span><i class="fl publicspr ico-arrowdown"></i></div>
+            <div id="FooterMT" class="footer-mt-st" style="display:none">
+                <a target="_blank" href="http://www.loldk.com/" onclick="pgvSendClick({hottag:'main.corp.loldk'});">英雄联盟大咖</a>
+                <a target="_blank" href="http://lol.15w.com/" onclick="pgvSendClick({hottag:'main.corp.15w'});">要我玩</a>
+                <a target="_blank" href="http://www.lolshipin.com/" onclick="pgvSendClick({hottag:'main.corp.lolshipin'});">木木不哭</a>
+                <a target="_blank" href="http://lol.17173.com/" onclick="pgvSendClick({hottag:'main.corp.17173'});">17173</a>
+                <a target="_blank" href="http://lol.yzz.cn/" onclick="pgvSendClick({hottag:'main.corp.yzz'});">叶子猪</a>
+                <a target="_blank" href="http://lol.tuwan.com/" onclick="pgvSendClick({hottag:'main.corp.tuwan'});">兔玩</a>
+                <a target="_blank" href="http://lol.te5.com/" onclick="pgvSendClick({hottag:'main.corp.te5'});">特玩</a>
+                <a target="_blank" href="http://lol.52pk.com/" onclick="pgvSendClick({hottag:'main.corp.52pk'});">52PK游戏网</a>
+                <a target="_blank" href="http://lol.replays.net/" onclick="pgvSendClick({hottag:'main.corp.replays'});">锐派</a>
+                <a target="_blank" href="http://www.wanplus.com/lol/" onclick="pgvSendClick({hottag:'main.corp.wanplus'});">玩加赛事</a>
+                <a target="_blank" href="http://lol.tgbus.com/" onclick="pgvSendClick({hottag:'main.corp.tgbus'});">电玩巴士</a>
+                <a target="_blank" href="http://lol.aipai.com/" onclick="pgvSendClick({hottag:'main.corp.aipai'});">爱拍游戏</a>
+                <a target="_blank" href="http://lol.uuu9.com/" onclick="pgvSendClick({hottag:'main.corp.u9'});">U9</a>
+                <a target="_blank" href="http://www.pentaq.com/" onclick="pgvSendClick({hottag:'main.corp.pentaq'});">pentaQ</a>
+                <a target="_blank" href="http://l.zhangyoubao.com/" onclick="pgvSendClick({hottag:'main.corp.zhangyoubao'});">掌游宝</a>
+                <a target="_blank" href="http://www.175kh.com/" onclick="pgvSendClick({hottag:'main.corp.175kh'});">七煌</a>
+                <a target="_blank" href="http://wangyou.pcgames.com.cn/zhuanti/lol/" onclick="pgvSendClick({hottag:'main.corp.pconline'});">太平洋</a>
+                <a target="_blank" href="http://lol.178.com/" onclick="pgvSendClick({hottag:'main.corp.178'});">178游戏网</a>
+                <a target="_blank" href="http://www.mycea.net/" onclick="pgvSendClick({hottag:'main.corp.mycea'});">电子竞技杂志</a>
+            </div>
+        </div>
+        <div class="footer-f">
+            <a class="fl footspr tnd footer-tcgame" title="腾讯互动娱乐" target="_blank" href="http://ieg.tencent.com/">腾讯互动娱乐</a>
+            <ul class="fr footer-flst"><li><a target="_blank" href="http://ieg.tencent.com/" class="c4F6">腾讯互动娱乐</a><span class="f9 plr10">|</span><a target="_blank" href="http://www.qq.com/contract.shtml" class="c4F6">服务条款</a><span class="f9 plr10">|</span><a target="_blank" href="http://adver.qq.com/" class="c4F6">广告服务</a><span class="f9 plr10">|</span><a target="_blank" href="http://game.qq.com/hr/" class="c4F6">腾讯游戏招聘</a><span class="f9 plr10">|</span><a target="_blank" href="http://service.qq.com/" class="c4F6">腾讯游戏客服</a><span class="f9 plr10">|</span><a target="_blank" href="http://tgact.qq.com/?g=lol" class="c4F6">游戏活动</a><span class="f9 plr10">|</span><a target="_blank" href="http://game.qq.com/gnav/" class="c4F6">游戏地图</a><span class="f9 plr10">|</span><a target="_blank" href="http://game.qq.com/portal2010/business.htm" class="c4F6">商务合作</a><span class="f9 plr10">|</span><a target="_blank" href="http://www.qq.com/" class="c4F6">腾讯网</a><span class="f9 plr10">|</span><a target="_blank" href="http://www.qq.com/map/" class="c4F6">网站导航</a></li><li class="fr"><a target="_blank" href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" class="c4F6">腾讯公司版权所有</a></li><li class="f9">COPYRIGHT &copy; 1998 - 2016 TENCENT. ALL RIGHTS RESERVED.</li><li class="f9">&copy; 2012 Riot Games, Inc. ALL RIGHTS RESERVED.</li><li>文网进字[2011] 004号 &amp; ISBN 978-7-89989-145-2<span class="f9 plr10">|</span><a target="_blank" class="c4F6" href="http://game.qq.com/culture2.htm
+">新出网证（粤）字010号</a><span class="f9 plr10">|</span><a target="_blank" class="c4F6" href="http://game.qq.com/culture.htm
+">粤网文[2014]0633-233号</a></li></ul>
+        </div>
+    </div>
+</div>
+
+<div id="J_popAct" class="popup pop-act" style="display: none">
+    <a href="javascript:ClosePop();" class="pop-act-close">&times;</a>
+    <a id="J_popLink" class="pop-link" href="http://lol.qq.com/act/a20161119preseasongame/index.htm?ADTAG=lolweb.popup" target="_blank"><img src="picture/bg-pop-web.jpg" width="900" height="560"></a>
+</div>
+
+
+<script src="js/lol_server_select.js"></script>
+<script src="js/head.js"></script>
+<script src="js/eas.js"></script>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/milo-min.js"></script>
+<script src="js/gdate.php"></script>
+
+<script>
+    var pageType = 1;
+
+    //记录用户COOKIE，首次访问弹出，半小时内再次进入隐藏
+    var setCookies = function(cookieName,value){
+        var exdate=new Date();
+            exdate.setTime(exdate.getTime() + (1000*60*60*1000));
+        document.cookie = cookieName + "="+ value + "; expires="+exdate.toUTCString();
+    },
+    getCookies = function(cookieName)//取cookies函数
+    {
+        var arr = document.cookie.match(new RegExp("(^| )"+cookieName+"=([^;]*)(;|$)"));
+        if(arr != null) return unescape(arr[2]); return null;
+    };
+
+
+//    var pop5thData ={
+//        '0':['2016-9-8 00:00:00','2016-9-9 00:00:00'],
+//        '1':['2016-9-9 00:00:00','2016-9-10 00:00:00'],
+//        '2':['2016-9-10 00:00:00','2016-9-11 00:00:00'],
+//        '3':['2016-9-11 00:00:00','2016-9-11 22:00:00']
+//    };
+
+    function ShowPop() {
+        need("biz.dialog", function (Dialog) {
+            Dialog.show({
+                id: 'J_popAct',
+                bgcolor: '#000',
+                opacity: 80
+            });
+        });
+    }
+
+    function ClosePop(){
+        need("biz.dialog",function(Dialog){
+            Dialog.hide();
+        });
+    }
+
+    function timeTransform(times){
+        var timeStr = times.replace('-',' ').replace('-',' ').split(' ');
+        return new Date(timeStr[0]+'/'+timeStr[1]+'/'+timeStr[2]+' '+timeStr[3]).getTime();
+    }
+
+//    for(var t in pop5thData){
+//        for(var j = 0;j<2;j++){
+//            pop5thData[t][j] = timeTransform(pop5thData[t][j]);
+//        }
+//    }
+
+//    ShowPop();
+
+//    var nowtime = timeTransform(json_curdate);
+//    for(var m in pop5thData){
+//        if(getCookies('isfirst')==null){
+//            setCookies('isfirst','isfirst');
+//            $('#J_popLink').html('<img src="picture/pic-popup.jpg" width="850" height="550" alt="">');
+//            ShowPop();
+//        }
+//    }
+
+</script><!--[if !IE]>|xGv00|eb29b7784500fc22e74d9e70cfae49ac<![endif]-->
+
+<script src="js/tvp.player_v2_jq.js" charset="utf-8"></script>
+<script>pageType = 0</script>
+<script src="js/common.js"></script>
+<script src="js/ping_tcss_ied.js"></script>
+<script type="text/javascript" src="js/lol_comm_log.js"></script>
+<script type="text/javascript" src="js/lol_comm_log_extend.js"></script>
+<script src="js/v1.js"></script>
+
+<!--//TA热区图统计-->
+<script src="js/81ee8d9fe1124f219b55c01dd5f3eafc.js" charset="UTF-8"></script>
+
+</body>
+</html><!--[if !IE]>|xGv00|2057846fec4d78804701d7fcf2207305<![endif]-->

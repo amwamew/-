@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/*top-B*/
+.top{
+    height: 52px;
+    border-bottom: 2px  solid red;
+}
+.top .top_l{
+    height: 52px;
+    width: 145px;
+    background: url("../image/wylogo.png") no-repeat;
+    float: left;
+    margin-left: 180px;
+}
+.top .top_r{
+    height: 52px;
+}
+.top .top_r ul{
+    float: right;
+    padding-right: 150px;
+}
+.top .top_r li{
+    float: left;
+    line-height: 52px;
+    padding: 0 14px;
+    font-size: 14px;
+    color: #B4181B;
+    cursor: pointer;
+}
+/*/!*top-E*!/*/
+
+/*box-B*/
+.box {
+    background: url("../image/bg1.jpg") no-repeat center center;
+    height: 2034px;
+}
+.db_l{
+    width: 118px;
+    height: 85px;
+    background: url("../image/tl.png");
+    cursor: pointer;
+    position: absolute;
+    top: 80px;
+    left: 25px;
+    display: none;
+}
+.db_r{
+    width: 126px;
+    height: 36px;
+    background: url("../image/tr_1.png");
+    cursor: pointer;
+    position: absolute;
+    top: 80px;
+    right: 25px;
+    display: none;
+}
+.name1{
+    height: 196px;
+    width: 65px;
+    background: url("../image/name1.png") no-repeat;
+    position: absolute;
+    top: 145px;
+    left: 275px;
+   display: none;
+}
+.name2{
+    height: 196px;
+    width: 65px;
+    background: url("../image/name2.png") no-repeat;
+    position: absolute;
+    top: 330px;
+    right: 400px;
+    cursor: pointer;
+    display: none;
+}
+.name3{
+    height: 196px;
+    width: 65px;
+    background: url("../image/name3.png") no-repeat;
+    position: absolute;
+    top:185px;
+    right:250px;
+    cursor: pointer;
+    display: none;
+}
+.sl{
+    width: 555px;
+    height: 555px;
+    background: url("../image/ld.png") no-repeat;
+    position: absolute;
+    top: -50px;
+    left: 440px;
+}
+.qr{
+    width: 210px;
+    height: 210px;
+    background: url("../image/qr.png") no-repeat;
+    position: absolute;
+    top: 660px;
+    left: 550px;
+    cursor: pointer;
+    display: none;
+}
+.qr1{
+    width: 216px;
+    height: 65px;
+    background: url("../image/qr1.png") no-repeat;
+    position: absolute;
+    top: 700px;
+    left: 785px;
+    cursor: pointer;
+    opacity: 0.5;
+    display: none;
+}
+.qr2{
+    width: 215px;
+    height: 65px;
+    background: url("../image/qr2.png") no-repeat;
+    position: absolute;
+    top: 785px;
+    left: 785px;
+    cursor: pointer;
+    opacity: 0.5;
+    display: none;
+}
+.sd{
+    width: 457px;
+    height: 283px;
+    background: url("../image/sd.png") no-repeat;
+    position: absolute;
+    top: 970px;
+    left: 540px;
+}
+
+.fs{
+    height: 520px;
+    width: 720px;
+    position: absolute;
+    top: 1260px;
+    margin-left: 400px;
+    background-color: red;
+    overflow: hidden;
+}
+.fs li {
+    width:720px;
+    height: 520px;
+    overflow: hidden;
+    float: left;
+}
+.fs ul{
+    width:5000px;
+    position: absolute;
+}
+
+.fs ol {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.fs ol li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.fs ol li.current {
+    background: yellow;
+}
+
+.fs span {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -20px;
+    background: #000;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.3;
+    border: 1px solid #fff;
+}
+
+.fs #right {
+    right: 5px;
+    left: auto;
+}
+
+
+
+
+

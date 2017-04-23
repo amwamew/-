@@ -1,0 +1,742 @@
+﻿/*iUP*/
+.promo-iphone-upgrade {
+  background-size: 360px 200px;
+  background-repeat: no-repeat;
+  background-image: url("../images/iphone_upgrade_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .promo-iphone-upgrade {
+    background-image: url("../images/iphone_upgrade_large_2x.jpg");
+  }
+}
+
+@media only screen and (min-width: 1442px) {
+  .promo-iphone-upgrade {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/iphone_upgrade_xlarge.jpg");
+  }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+  .promo-iphone-upgrade {
+    background-image: url("../images/iphone_upgrade_xlarge_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .promo-iphone-upgrade {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/iphone_upgrade_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .promo-iphone-upgrade {
+    background-image: url("../images/iphone_upgrade_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .promo-iphone-upgrade {
+    background-size: 736px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/iphone_upgrade_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+  .promo-iphone-upgrade {
+    background-image: url("../images/iphone_upgrade_small_2x.jpg");
+  }
+}
+
+html.ie8 .promo-iphone-upgrade {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/iphone_upgrade_medium.jpg");
+    height: 200px;
+    font-size: 0
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    html.ie8 .promo-iphone-upgrade {
+        background-image: url("../images/iphone_upgrade_medium_2x.jpg")
+    }
+}
+
+/*Watch Nike*/
+.promo-nike-watch {
+  background-size: 360px 200px;
+  background-repeat: no-repeat;
+  background-image: url("../images/nike_watch_large_1.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .promo-nike-watch {
+    background-image: url("../images/nike_watch_large_2x_1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1442px) {
+  .promo-nike-watch {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/nike_watch_xlarge_1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+  .promo-nike-watch {
+    background-image: url("../images/nike_watch_xlarge_2x_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .promo-nike-watch {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/nike_watch_medium_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .promo-nike-watch {
+    background-image: url("../images/nike_watch_medium_2x_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .promo-nike-watch {
+    background-size: 736px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/nike_watch_small_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+  .promo-nike-watch {
+    background-image: url("../images/nike_watch_small_2x_1.jpg");
+  }
+}
+
+html.ie8 .promo-nike-watch {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/nike_watch_medium_1.jpg");
+    height: 200px;
+    font-size: 0
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    html.ie8 .promo-nike-watch {
+        background-image: url("../images/nike_watch_medium_2x_1.jpg")
+    }
+}
+
+/*AirPods*/
+.promo-airpods {
+  background-size: 360px 200px;
+  background-repeat: no-repeat;
+  background-image: url("../images/airpods_large_1.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .promo-airpods {
+    background-image: url("../images/airpods_large_2x_1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1442px) {
+  .promo-airpods {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/airpods_xlarge_1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+  .promo-airpods {
+    background-image: url("../images/airpods_xlarge_2x_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .promo-airpods {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/airpods_medium_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .promo-airpods {
+    background-image: url("../images/airpods_medium_2x_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .promo-airpods {
+    background-size: 736px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/airpods_small_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+  .promo-airpods {
+    background-image: url("../images/airpods_small_2x_1.jpg");
+  }
+}
+
+html.ie8 .promo-airpods {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/airpods_medium_1.jpg");
+    height: 200px;
+    font-size: 0
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    html.ie8 .promo-airpods {
+        background-image: url("../images/airpods_medium_2x_1.jpg")
+    }
+}
+
+/*Accessibility*/
+.promo-accessibility {
+  background-size: 360px 200px;
+  background-repeat: no-repeat;
+  background-image: url("../images/accessibility_large_1.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .promo-accessibility {
+    background-image: url("../images/accessibility_large_2x_1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1442px) {
+  .promo-accessibility {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/accessibility_xlarge_1.jpg");
+  }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+  .promo-accessibility {
+    background-image: url("../images/accessibility_xlarge_2x_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .promo-accessibility {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/accessibility_medium_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .promo-accessibility {
+    background-image: url("../images/accessibility_medium_2x_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .promo-accessibility {
+    background-size: 736px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/accessibility_small_1.jpg");
+  }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+  .promo-accessibility {
+    background-image: url("../images/accessibility_small_2x_1.jpg");
+  }
+}
+
+html.ie8 .promo-accessibility {
+    background-size: 640px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/accessibility_medium_1.jpg");
+    height: 200px;
+    font-size: 0
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    html.ie8 .promo-accessibility {
+        background-image: url("../images/accessibility_medium_2x_1.jpg")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.promo-ipad-pro {
+    background-size: 360px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/ipad_pro_large_1.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-ipad-pro {
+        background-image: url("../images/ipad_pro_large_2x_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-ipad-pro {
+      background-size: 640px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/ipad_pro_xlarge_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-ipad-pro {
+        background-image: url("../images/ipad_pro_xlarge_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-ipad-pro {
+      background-size: 640px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/ipad_pro_medium_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-ipad-pro {
+        background-image: url("../images/ipad_pro_medium_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-ipad-pro {
+      background-size: 736px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/ipad_pro_small_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-ipad-pro {
+        background-image: url("../images/ipad_pro_small_2x_1.jpg")
+    }
+}
+
+.promo-holiday-photos {
+    background-image: url("../images/gifts_photography_large_1.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-holiday-photos {
+        background-image: url("../images/gifts_photography_large_2x_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-holiday-photos {
+        background-image: url("../images/gifts_photography_xlarge_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-holiday-photos {
+        background-image: url("../images/gifts_photography_xlarge_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-holiday-photos {
+        background-image: url("../images/gifts_photography_medium_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-holiday-photos {
+        background-image: url("../images/gifts_photography_medium_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-holiday-photos {
+        background-image: url("../images/gifts_photography_small_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-holiday-photos {
+        background-image: url("../images/gifts_photography_small_2x_1.jpg")
+    }
+}
+
+.promo-holiday-music {
+    background-image: url("../images/gifts_music_b_large_1.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-holiday-music {
+        background-image: url("../images/gifts_music_b_large_2x_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-holiday-music {
+        background-image: url("../images/gifts_music_b_xlarge_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-holiday-music {
+        background-image: url("../images/gifts_music_b_xlarge_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-holiday-music {
+        background-image: url("../images/gifts_music_b_medium_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-holiday-music {
+        background-image: url("../images/gifts_music_b_medium_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-holiday-music {
+        background-image: url("../images/gifts_music_b_small_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-holiday-music {
+        background-image: url("../images/gifts_music_b_small_2x_1.jpg")
+    }
+}
+
+.promo-holiday-games {
+    background-image: url("../images/gifts_gaming_b_large_1.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-holiday-games {
+        background-image: url("../images/gifts_gaming_b_large_2x_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-holiday-games {
+        background-image: url("../images/gifts_gaming_b_xlarge_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-holiday-games {
+        background-image: url("../images/gifts_gaming_b_xlarge_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-holiday-games {
+        background-image: url("../images/gifts_gaming_b_medium_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-holiday-games {
+        background-image: url("../images/gifts_gaming_b_medium_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-holiday-games {
+        background-image: url("../images/gifts_gaming_b_small_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-holiday-games {
+        background-image: url("../images/gifts_gaming_b_small_2x_1.jpg")
+    }
+}
+
+.promo-hour-of-code {
+    background-image: url("../images/hour_of_code_tile_large_1.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-hour-of-code {
+        background-image: url("../images/hour_of_code_tile_large_2x_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-hour-of-code {
+        background-image: url("../images/hour_of_code_tile_xlarge_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-hour-of-code {
+        background-image: url("../images/hour_of_code_tile_xlarge_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-hour-of-code {
+        background-image: url("../images/hour_of_code_tile_medium_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-hour-of-code {
+        background-image: url("../images/hour_of_code_tile_medium_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-hour-of-code {
+        background-image: url("../images/hour_of_code_tile_small_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-hour-of-code {
+        background-image: url("../images/hour_of_code_tile_small_2x_1.jpg")
+    }
+}
+
+.promo-apple_music {
+    background-size: 360px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/promo_apple_music_large.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-apple_music {
+        background-image: url("../images/promo_apple_music_large_2x.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-apple_music {
+        background-size: 640px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/promo_apple_music_xlarge.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-apple_music {
+        background-image: url("../images/promo_apple_music_xlarge_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-apple_music {
+        background-size: 640px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/promo_apple_music_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-apple_music {
+        background-image: url("../images/promo_apple_music_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-apple_music {
+        background-size: 736px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/promo_apple_music_small.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-apple_music {
+        background-image: url("../images/promo_apple_music_small_2x.jpg")
+    }
+}
+
+.promo-iphone7 {
+    background-size: 360px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/iphone7_large_1.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-iphone7 {
+        background-image: url("../images/iphone7_large_2x_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-iphone7 {
+        background-size: 640px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/iphone7_xlarge_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-iphone7 {
+        background-image: url("../images/iphone7_xlarge_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-iphone7 {
+        background-size: 640px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/iphone7_medium_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-iphone7 {
+        background-image: url("../images/iphone7_medium_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-iphone7 {
+        background-size: 736px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/iphone7_small_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-iphone7 {
+        background-image: url("../images/iphone7_small_2x_1.jpg")
+    }
+}
+
+.promo-macbook-pro {
+    background-size: 360px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/macbook_pro_large_1.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-macbook-pro {
+        background-image: url("../images/macbook_pro_large_2x_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-macbook-pro {
+        background-size: 640px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/macbook_pro_xlarge_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-macbook-pro {
+        background-image: url("../images/macbook_pro_xlarge_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-macbook-pro {
+        background-size: 640px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/macbook_pro_medium_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-macbook-pro {
+        background-image: url("../images/macbook_pro_medium_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-macbook-pro {
+        background-size: 736px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/macbook_pro_small_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-macbook-pro {
+        background-image: url("../images/macbook_pro_small_2x_1.jpg")
+    }
+}
+
+.promo-wad {
+    background-size: 360px 200px;
+    background-repeat: no-repeat;
+    background-image: url("../images/buy_red_large_1.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-wad {
+        background-image: url("../images/buy_red_large_2x_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-wad {
+        background-size: 640px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/buy_red_xlarge_1.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-wad {
+        background-image: url("../images/buy_red_xlarge_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-wad {
+        background-size: 640px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/buy_red_medium_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-wad {
+        background-image: url("../images/buy_red_medium_2x_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-wad{
+        background-size: 736px 200px;
+        background-repeat: no-repeat;
+        background-image: url("../images/buy_red_small_1.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-wad {
+        background-image: url("../images/buy_red_small_2x_1.jpg")
+    }
+}
+
+

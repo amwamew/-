@@ -1,0 +1,298 @@
+@charset "gbk";
+
+/*
+Site Name: LOL Website
+Site URL: http://lol.qq.com
+Author: smallni
+Author URL: http://www.smallni.com
+Description:  LOL Website Main Style
+Version: 1.0
+*/
+
+/*.wraper{background:url(../images/main-bg-v29.jpg) no-repeat center top;}*/
+/*.toper{background: url(../images/main-top-v25.jpg) no-repeat center top;}*/
+.promo{ position: relative; width: 780px; height: 370px; overflow: hidden}
+.promo-list{ position: relative; width: 3900px; height: 330px;}
+.promo-item{ float:left; width: 780px; height: 330px; background: #000; overflow: hidden }
+.promo-item a,.promo-item img{ display: block; width: 780px; height: 330px;}
+.promo-list .on{opacity: 1; filter:alpha(opacity=100)}
+.promo-trigger{ width: 100%; height: 40px; background: #efefef; overflow: hidden; zoom: 1}
+.promo-trigger span{ float:left; width: 156px; height: 40px; line-height: 40px;  cursor:pointer; text-align: center; color: #333; font-size: 14px;}
+.promo-trigger .on{ color: #fff; background: #36AB87; font-weight: bold}
+/*.mainspr,.icon-v{background-image: url(../images/mainspr.png); background-repeat: no-repeat;}*/
+/*公共*/
+.txtlist-nape{display: block; height: 24px; line-height: 24px; position: relative; padding: 0 50px 0 0; overflow: hidden; font-size: 14px;}
+.txtlist-nape .lnk-type{margin-right: 5px;overflow: hidden; color: #555555}
+.txtlist-nape .lnk-tit{color: #333}
+.txtlist-nape .ico-arr{position: absolute; top: 8px;left: 0;display: block;width:4px;height:7px; background-position: -716px 0}
+.txtlist-nape .date{position: absolute; top:0; right: 0; line-height: 24px; color: #9BA0AD;}
+.boxl{ margin-top: 40px; width: 780px;}
+.boxr{ margin-top: 39px; width: 350px;}
+.more{  width: 36px; height: 36px; background-position: -602px -42px; text-indent: -999em; overflow: hidden }
+.tab{ position: relative; height: 36px; line-height: 36px;border-bottom: 4px solid #ebecec;}
+.tab-nav{ position: relative; height: 36px; }
+.tab-nav li{float: left; height: 36px; line-height: 36px; overflow: hidden; cursor: pointer; color: #666666; font-size: 16px; text-align: center}
+.tab-nav .current{ color: #00ab88; font-weight: bold; border-bottom: 4px solid #00ab88}
+.home-mod{ margin-bottom: 50px;}
+.home-mod-l{ float: left; width: 780px;}
+.home-mod-l .hd{ height: 40px; margin-bottom: 15px; }
+.home-mod-r{ float: right; width: 400px;}
+.home-mod-r .hd{ height: 40px; line-height: 40px; margin-bottom: 15px; overflow: hidden}
+.home-title{ float: left; font-size: 25px; line-height: 40px; color: #555555; font-weight: bold}
+
+/* icon */
+.icon-video,.icon-submit,.icon-hero,.icon-quick,.icon-match,.icon-online,.icon-activity{ display: inline-block; vertical-align: -10px; width: 40px; height: 40px; margin-right: 5px }
+.icon-video{ background-position: -40px -40px; }
+.icon-submit{ vertical-align:middle; width:24px; height:24px; background-position:-567px -46px;}
+.icon-hero{ background-position: -160px -40px;}
+.icon-quick{ background-position: -200px -40px;}
+.icon-match{ background-position: -80px -40px;}
+.icon-online{ background-position: -640px -40px;}
+.icon-activity{ background-position: -240px -40px;}
+
+
+/*新闻*/
+.home-news{ position: relative; height: 370px;overflow: hidden;}
+.news-top{ padding-right: 36px; }
+/*.news-top .more{ position: absolute; right: 0; top: 0; }*/
+.news-nav li{ width: 90px; font-size: 18px;}
+.news-list{padding: 12px 0 0; height:278px; background-position: 0 0}
+.news-item{ height: 26px; line-height: 26px; padding: 3px 0}
+.news-item .lnk-tit{ display: block; position: relative; height: 26px; line-height: 26px; padding: 0 55px; overflow: hidden; font-size: 14px; color: #333;}
+.news-item .new-type{ position: absolute; left: 0; top: 0; width: 46px; height: 22px; line-height: 22px; background: #ebebeb; border: 2px solid #ebebeb; text-align: center; color: #a4a4a4; border-radius: 15px; }
+.news-item .date{ position: absolute; right: 0; top: 0; width: 50px; height: 26px; line-height: 26px; text-align: right; color: #a4a4a4  }
+.news-item .lnk-tit:hover{ color: #00a684; text-decoration: none;}
+.news-item .lnk-tit:hover .date{ color: #00ab88}
+.news-content .first{ height: 46px; margin-bottom: 5px; text-align: center; line-height: 46px; font-size: 20px; font-weight: bold; overflow: hidden;}
+.news-list .first .lnk-tit{ color: #00a684;}
+.news-list .first span,.news-list .first i,.news-list .first .lnk-type{display: none;}
+.home-news .more{position: absolute; right: 0; top: 0;}
+
+.more-lnk{ color: #9FA4B1;}
+.more-lnk2{color: #666}
+.vote-tips{ display: block; width: 100%; height: 40px; line-height: 40px; color: #797979; background: #efefef; font-size: 14px; text-align: center; }
+.vote-tips a{ display: block; color: #797979;}
+.vote-tips a:hover{ background: #e8e6e6; text-decoration: none}
+
+/* home-video 视频中心 */
+/*.home-video{ margin-bottom: 20px;}*/
+.home-video-title{ float: left; }
+.video-submit{ float: right; height: 38px; padding: 0 18px; line-height: 38px; font-size:14px; color:#999999; border: 1px solid #ededee; border-radius: 15px;}
+.txt-more{ float: right; margin-top: 3px; height: 30px; padding: 0 10px; line-height: 30px; margin-left: 10px; background: #efefef; border:2px solid #efefef; color: #777777; font-size: 14px; border-radius: 25px; }
+.txt-more:hover{ border-color: #00ab88; color: #00ab88; background: none;}
+.video-nav li{ width: 130px; }
+.pop-top-video{ position:relative; left:50%; top:50%; width:900px; height: 550px; margin-left:-375px; z-index:9999; background: #000 }
+.pop-close{	position: absolute; top: 0; right: -60px; width: 50px; height: 50px; line-height: 50px; cursor: pointer; z-index: 8040; color: #1AE1B8; font-size:80px; }
+
+
+/* mod */
+.v-list{display: none;}
+.v-list li{ float:left; position:relative; _display:inline; overflow:hidden}
+.v-list a{ display:block;color:#4e4e4e}
+.icon-v{ display:none; position:absolute; left:50%;  margin-left:-32.5px; top:15px; width:65px; height:65px; background:url(../images/bg-icon-v.png) no-repeat 0 0; cursor:pointer}
+.shadow1{ position:absolute; left:0; bottom:0; display:block; width:100%; height:20%; background: rgba(0,0,0,0.5) }
+.shadow2{ display:none; position:absolute; left:0; top:0; width:100%; height:100%; /* opacity:0.3; filter:alpha(opacity=30)  */background:rgba(0,0,0,0.3); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);}
+.v-name a:hover,.switch a:hover,a.v-rank-link:hover,a.more-link:hover,.select-down-list a:hover{ color:#00a483; text-decoration:none}
+.v-mod-list { position: relative; height: 320px; overflow: hidden; margin-right:-20px; padding-top: 30px; margin-bottom: 28px;}
+.v-mod-list li{ width:180px; margin-right:20px; margin-bottom:20px;}
+/*.v-mod-list li:hover{ background-color:#ececec;}*/
+.v-mod-list .v-link{ position:relative; display:block; width:180px; height:100px; margin-bottom:7px;}
+.v-list li:hover .icon-v,.v-list li:hover .shadow2{ display:block}
+.v-mod-list .v-name{ height:40px; line-height:20px; overflow:hidden; text-overflow:ellipsis}
+.v-mod-list .v-name a{ font-size:14px; font-weight:normal; color: #333;}
+.v-mod-list .v-meta{ position:absolute; bottom:0; left:5px; width:96%; height:20px;  color:#ddd}
+.v-mod-list .v-meta .v-time{ float:right;}
+.v-mod-list .v-data-play{ float:left}
+.v-mod-list .v-time{ float:right}
+.v-mod-list .v-info{ color:#909090}
+.v-mod-list .v-link img{ width:180px; height:100px; overflow:hidden}
+.video-more-link{ display: block; background: #eaeaea; height: 40px; line-height: 40px; text-align: center; font-size: 14px; color: #666666;}
+.video-more-link em{ color: #00ab88; font-weight: bold; padding: 0 3px;}
+.video-more-link:hover{ background: #dedddd}
+
+/*活动中心*/
+.title-act{width: 103px; height: 25px; background-position:-584px -88px}
+.acticonlist{text-align: right;}
+.acticonlist .normal,.acticonlist .current{float: left;width: 20px; height: 19px; cursor:pointer; background-position: -713px -45px;}
+.acticonlist .current{background-position: -713px -27px;}
+.main-actlist{width: 145px; }
+.main-actlist li{width: 185px; height: 135px;margin-bottom: 5px; overflow: hidden;}
+.main-actlist li,.main-actlist .act-img{ width: 145px; height: 172px;}
+.main-actlist .act-sbg{width: 181px;}
+.main-actlist .act-sbg,.main-actlist .actcurrent .act-sbg{ top: 118px; width: 145px; border:0;}
+.main-actlist .act-sbg2{width: 145px;}
+.main-actlist .act-info{ width: 97%; height: 135px;}
+.main-actlist .act-name{top:125px; font-size: 14px; width:140px;}
+.main-actlist .act-num{top:147px; width: 83%; overflow: hidden;}
+.main-actlist .act-tit2{top: 5px;font-size: 16px; color: #5AFEDF;}
+.main-actlist .act-tit2,.main-actlist .act-tx{left:10px;}
+.main-actlist .act-tx{top: 35px; height: 80px;width: 78%; line-height: 20px;}
+.main-actlist .act-lnk{font-size: 14px; height: 24px;text-align: left; text-indent: 2.2em;}
+.main-actlist .act-img{width: 185px;}
+.act-txtlist{width: 240px; }
+.act-txtlist .txtlist-nape{padding-right: 0; margin-bottom: 1px;}
+.act-txtlist .lnk-tit{display: block; padding: 0 0 0 10px; height: 21px; line-height: 21px; overflow: hidden;}
+.act-txtlist .lnk-tit em{float: left; width: 73%; height: 21px;line-height: 21px; overflow: hidden;}
+.act-txtlist .lnk-tit .tip{float: right; width: 25%; text-align: center; overflow: hidden; background-color: #EBEBEB; color: #9A9898; border-radius: 15px; font-size: 12px;}
+.act-txtlist .lnk-tit:hover,.act-txtlist .lnk-tit:hover .tip{ background-color: #E3E3E3;text-decoration: none;border-radius: 15px;}
+.act-txtlist .txtlist-now .lnk-tit:hover,.act-txtlist .txtlist-now .lnk-tit:hover .tip,.act-txtlist .txtlist-now .tip{ background-color: #00A887; color: #fff; border-radius: 15px;}
+
+/* hero and skin 英雄皮肤模块 */
+.home-hero{ margin-bottom: 0;}
+.home-hero-title{ float: left;}
+.hero-tab{ margin-bottom: 15px;}
+.hero-tab li{ width: 133.333333px;}
+.hero-content{ height: 190px; margin-bottom: 20px;}
+.sbg{ display: none; position: absolute; width: 100%; height: 100%; top: 0; left: 0; background:#029f7f; background: rgba(2,159,127,0.8); cursor: pointer;*background: none; overflow: hidden; z-index: 1}
+.sbg .first-name{ display: block; padding-top: 18px; font-size: 14px; color: #fff; text-align: center }
+.sbg .desc{ display: block; position: absolute; bottom: 5px; right: 5px; width: 66px; height: 20px; line-height: 20px; border: 2px solid #fff; border-radius: 15px; text-align: center; color: #fff; }
+
+
+/*免费英雄*/
+/*.title-free{ width: 131px;height: 25px;background-position:-584px -166px}*/
+.free-list{ position: relative; margin-right: -5px;}
+.free-list img{ display: block; width: 90px; height: 90px; margin-top: -7px; margin-left: -7px;}
+.free-list a{ float: left; position: relative; width: 76px; height: 76px; overflow: hidden; margin-right: 5px; margin-bottom: 5px;}
+/*.free-list .n{ position: absolute; top: 10px; left: 0; color: #fff; display: none; width: 100%; text-align: center; line-height: 14px;}*/
+.free-list a:hover .sbg{display: block;}
+.free-list .first-name{ position: absolute; width: 66px; text-align: center; top: 30px; left: 5px; padding-top: 0; line-height: 14px; }
+.free-time{text-align: right; color: #9F9F9F; margin-bottom: 22px;}
+
+
+/* hero new */
+.hero-new-list{ margin-right: -5px;}
+.hero-new-list a{ float: left; position: relative; width: 76px; height: 165px; margin-right: 5px;}
+.hero-new-list img{ display: block; width: 76px; height: 165px;}
+.hero-new-list a:hover .sbg{ display: block;}
+.hero-new-list .last-name{ display: block; text-align: center; font-size: 12px; color: #26F2C8}
+.hero-new-list .first-name{ width: 66px; padding: 30px 5px 10px 5px; text-align: center}
+
+
+/* quick mod 快捷入口 */
+.home-quick{ margin-bottom: 40px;}
+.icon-quick-icon,.icon-quick-popularity,.icon-quick-cdk,.icon-quick-gameinfo,.icon-quick-weibo,.icon-quick-reward,.icon-quick-bbs,.icon-quick-online,.icon-quick-style{ display: block; width: 40px; height: 36px; margin: 0 auto; }
+.icon-quick-icon{ background-position: -280px -40px; }
+.icon-quick-popularity{ background-position: -320px -40px; }
+.icon-quick-cdk{ background-position: -360px -40px; }
+.icon-quick-gameinfo{ background-position: -120px -40px; }
+.icon-quick-weibo{ background-position: -400px -40px; }
+.icon-quick-reward{ background-position: -440px -40px; }
+.icon-quick-bbs{ background-position: -480px -40px; }
+.icon-quick-online{ background-position: -520px -40px; }
+.icon-quick-style{ background-position: -680px -40px; }
+.home-quick-content{ margin-right: -8px;}
+.home-quick-content a{ float: left; width: 94px; padding-top: 3px; height: 62px; margin-right: 8px; *margin-right: 6px; margin-bottom: 8px; background: #fefefe; font-size: 14px; color: #555555; text-align: center; box-shadow: 0 0 2px #ddd}
+.home-quick-content a:hover{ color: #029f7f }
+.home-quick-content a:hover .icon-quick-icon{ background-position: -280px -80px; }
+.home-quick-content a:hover .icon-quick-popularity{ background-position: -320px -80px; }
+.home-quick-content a:hover .icon-quick-cdk{ background-position: -360px -80px; }
+.home-quick-content a:hover .icon-quick-gameinfo{ background-position: -120px -80px; }
+.home-quick-content a:hover .icon-quick-weibo{ background-position: -400px -80px; }
+.home-quick-content a:hover .icon-quick-reward{ background-position: -440px -80px; }
+.home-quick-content a:hover .icon-quick-bbs{ background-position: -480px -80px; }
+.home-quick-content a:hover .icon-quick-online{ background-position: -520px -80px; }
+.home-quick-content a:hover .icon-quick-style{ background-position: -680px -80px; }
+.home-quick-content a:hover .home-quick-content{ margin-right: -8px;}
+
+/*赛事中心*/
+.match-tab li{ width: 130px;}
+.title-event,.title-101{ margin-bottom: 15px; width: 101px; height: 25px; background-position:-584px -114px}
+.pagetab-list{margin-bottom: -2px; position: relative;border-bottom: 2px solid #E2E2E2;_border-bottom:0;height: 51px; background: #F0F0F0;width: 100%;}
+.pagetab-list li{float: left;display: block; border-top: 4px solid #D7D7D7; height: 49px; line-height: 48px; text-align: center; color: #525252; font-size: 14px; width: 100%; cursor: pointer;}
+.pagetab-list li.current{border-top: 4px solid #00A383; color: #00A383; background: #fff;}
+.pagetablist-five{border-top: 3px solid #D7D7D7}
+.pagetablist-five li{width: 98px; height: 53px; margin-top: -4px; position: relative;}
+#Jevent  li{width: 84px; height: 53px; margin-top: -4px; position: relative;}
+.pagetablist-five .pagetab-list-lnk{height: 53px;}
+.pagetablist-two li{width: 50%;}
+.home-match-content{ padding: 20px 0; overflow: hidden; zoom: 1 }
+.home-match-side{ float: left; width: 180px; margin-right: 20px;}
+.home-match-side img{ display: block; width: 180px; height: 225px}
+.btn-long{display: block; margin-top: 10px; width: 180px; height: 40px;line-height: 40px; font-size: 14px; text-align: center;color: #0b4c3f; font-weight: bold; background-position: 0 -346px;}
+.home-match-news{ position: relative; overflow: hidden; zoom: 1}
+.home-match-news .meta{ font-size: 14px; line-height: 1.5;}
+.event-tit{ display: block; margin-bottom: 10px; font-size: 26px; color: #00A686; font-weight: bold; line-height: 30px;}
+.event-txtlist{ margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0 }
+.event-txtlist .txtlist-nape{ height: 28px; line-height: 28px;}
+.event-txtlist .lnk-type{display: none;}
+.event-txtlist .lnk-tit:hover{ color: #00a684; text-decoration: none;}
+.event-txtlist .lnk-tit:hover .date{ color: #00ab88}
+.event-num{ position: absolute; top: 0; right: 10px; height: 66px; text-align: center; color: #666666; font-size: 14px;}
+.event-num .fbig{ font-size: 36px; color: #00a986; display: block; padding: 10px 0 5px; font-weight: bold; margin-bottom: 10px;}
+/*模拟单�?�框 === 输入�?�??*/
+.ms-radio{margin-right: 3px; display: inline-block;vertical-align:middle; width:14px; height: 14px; border:1px solid #B1B1B1;border-radius: 10px; cursor: pointer; position: relative;}
+.ms-radio .i{display: inline-block; position:absolute; top: 2px; left: 2px; height: 10px; width: 10px; cursor: pointer; background: #fff}
+.current .ms-radio .i{ background: #00A383;border-radius: 10px;}
+/*战争学院*/
+.title-101{background-position: -584px -140px}
+.box101{padding: 20px 19px;}
+.box101-img{width: 106%; margin-right: -20px;position: relative;}
+.box101-img li{ float: left; margin-right: 16px; margin-bottom: 20px;}
+.box101-fil{ width: 55%; height: 32px;padding-top: 8px;}
+.box101-fil li{float: left; width: 50%;}
+.box101-fil .ms-radio{float:left;margin-top: 1px;}
+.box101-fil label{cursor: pointer;}
+.box101-search{width: 30%;}
+.searchbox{ padding: 0 27px 0 8px; height: 27px; background: #fff;border:1px solid #CDCDCD;box-shadow: -1px 0 3px rgba(0, 0, 0, 0.1) inset;position: relative;}
+.input-search{ margin-top: 3px; width: 100%; height: 20px;line-height: 20px;background: none; color: #999;border:0; font-size: 12px; border-right: 1px solid #E5E5E5}
+.btn-search{position: absolute;top: 5px; right: 0; display: block;}
+.box101-txtlist{width: 100%; height:120px}
+.box101-txtlist .txtlist-nape{padding-right: 110px;}
+.box101-txtlist .sidbar{width: 46px;}
+.box101-txtlist .date{width: 100px;}
+.box101-select{width: 136px;overflow: hidden; padding-top: 8px;}
+.box101-slct{float: right;height:22px;border:1px solid #DCDCDC;box-shadow:0 0 2px rgba(0,0,0,.1) inset;font-size: 12px; cursor: pointer;}
+/*.choonames{float: right;width: 136px; position: relative;z-index: 2}
+	.choonames-curr{display: inline-block;margin-left: 5px;padding-left: 5px; width: 90px; height: 32px; line-height: 32px; background: #00A483;color: #fff;font-size: 14px; cursor: pointer;}
+	.choonames-curr .n{display: inline-block;width: 80%;}
+	.ico-arrdown{display: inline-block;width:9px;height:7px;background-position:-714px -101px;overflow: hidden; vertical-align: middle;}
+	.choonames-list{position: absolute; top: 33px; right: 0; width: 95px; height: 100px; background: #00A483}
+	.choonames-list a{display: block;padding-left: 5px; line-height: 20px;color: #fff;}
+	.choonames-list a:hover{background: #008367;text-decoration: none;}*/
+/***进度�?�??*/
+.sidbar{display: block;margin-top: 5px; height: 9px; border:1px solid #E0E0E0; padding: 2px; background: #fff; position: relative;overflow: hidden;}
+	.upbar-red,.upbar-green,.sidbar .empt{display: block;width: 100%; height: 9px; background: #eee;}
+	.upbar-red,.upbar-green{margin-top: -9px;position: relative;}
+	.upbar-green{background: #00A483}
+	.upbar-red{background: #E04502}
+.subgimg{padding: 30px 0 25px; display: block; position: relative;}
+/*.subgimg img{width: 352px; height: 60px; border-bottom-width: 2px;}*/
+/*soso问问*/
+.title-soso{width: 118px; height: 25px; background-position: -584px -214px}
+.soso-search{width: 89%; margin-top:10px;}
+
+/*客服专区*/
+.online-nav{ float: left}
+.online-nav li{ width:130px; }
+.online-other{ float: right;}
+.online-other a{ display: inline-block; color: #666; font-size: 14px; margin-left: 30px;  }
+.home-online-more{ float: right }
+
+.kfbox{padding-top: 40px;}
+.kfbox .f9{font-size: 10px; color: #999; padding: 0 10px; font-family: simsun}
+.title-kf{width: 103px; height: 25px; background-position: -584px -191px}
+.kf-nav{ margin-top: 10px; height: 34px; border:1px solid #CFCFCF; background-position: 0 -240px;position: relative;z-index: 2; line-height: 34px;}
+.fknav-lst{ width: 38%; margin-bottom: -4px;position: relative; height: 38px;}
+.fknav-lst li{ float: left; width: 93px; text-align: center; font-size: 14px;cursor: pointer;}
+.fknav-lst li.current{position: relative;margin: -1px -1px 0 -1px; height: 34px; border:1px solid #bbb; background: #FAFAFA; border-bottom: 3px solid #FAFAFA; font-weight: bold; color: #333;}
+.kf-txtlist{ height: 155px; position: relative;z-index: 1}
+.fknav-lnk{padding-right: 10px; color: #CBCBCB;}
+.fknav-lnk a{color: #666;}
+.kf-txtlist{ padding: 20px 0;}
+.kf-txtlist .txtlist-nape{ float: left; width: 39%; padding-bottom: 2px;}
+.kf-txtlist .lnk-type,.kf-txtlist .date{display: none;}
+/*.txtlist-nape .ico-num{float: left;margin-right: 3px; margin-top: 3px; width: 17px; height: 17px; background: #00A483; border-radius: 3px; text-align: center;line-height: 17px; color: #fff; font-style: normal;}*/
+/*#fkNAV_n2_inner li{ width: 30%; padding-right: 0;}*/
+
+/*掌盟浮窗*/
+.appfix{width: 108px;height: 130px;position: fixed;top: 407px;right: 0; z-index: 3}
+.appfix a{width: 108px;height: 130px;display: block;overflow: hidden;color: #A5A5A5;font-size: 12px;text-align: center;line-height: 26px}
+.appfix a:hover{ color:#00A383; text-decoration:none}
+.appfix img{vertical-align: top;width: 108px;height: 108px;display: block;}
+
+/*���ڵ���*/
+.spring-dia{width: 1000px;height: 435px;}
+.side-tips-2{ width: 220px; height: 110px; position: fixed; bottom: 10px; right: 10px; z-index: 3; }
+.btn-tips-link{ display: block; width: 220px; height: 110px; background: url(../images/tips-fighting.jpg) no-repeat 0 0; overflow: hidden}
+.side-tips-close{ position: absolute; width: 30px; height: 30px; line-height: 30px; text-align: center; color: #fff; font-size: 24px; right: 0; top: -32px; font-family: simsun; font-weight: bold; background: #000;}
+/*  |xGv00|5e55ce742899ea2b240b3da0f10e1425 */

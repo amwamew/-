@@ -1,0 +1,2617 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="阴阳师手游,阴阳师手游官网,阴阳师手游礼包,阴阳师手游攻略,阴阳师手游数据库,阴阳师手游抽签模拟器"/>
+    <meta name="description" content="阴阳师手游是款3D和风卡牌RPG手游.更多有关阴阳师手游,阴阳师手游官网,阴阳师手游礼包,阴阳师手游攻略,阴阳师手游下载等内容尽在口袋巴士阴阳师手游专区."/>
+    <title>阴阳师手游_阴阳师手游官网_阴阳师手游资讯_下载_攻略_口袋巴士</title>
+    <link href="css/base_utf-8.css" rel="stylesheet" type="text/css"/>
+    <link type="text/css" href="css/lightbox.css" rel="stylesheet"/>
+    <link href="css/head.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/banner.css"/>
+    <base target="_blank">
+
+    <style>
+        .lz {
+            display:none;
+            position: fixed;
+            left: 16px;
+            top: 120px;
+        }
+
+        .xhj {
+            position: fixed;
+            right: 34px;
+            bottom: 60px;
+            display: none;
+        }
+
+        .lz li {
+            width: 100px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 15px;
+            color: #fff;
+            background-color: #33383C;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .lz li:hover {
+            color: #000;
+            background-color: #686D71;
+        }
+
+
+        /*阴阳师手游网页轮播图*/
+        .all {
+            width: 984px;
+            height: 142px;
+            padding: 7px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .screen {
+            width: 984px;
+            height: 142px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .screen li {
+            width: 246px;
+            height: 142px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .screen ul {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 5000px;
+        }
+
+
+        .all ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .all ol li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .all ol li.current {
+            background: yellow;
+        }
+
+        #arr {
+            display: none;
+        }
+
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
+
+    <script src="animate.js"></script>
+    <script src="jquery-1.11.1.js"></script>
+
+    <script>
+        window.onload = function () {
+            var zdXiaoMeiNv = document.getElementsByClassName("zdxiaomeinv")[0];
+            var obj1 = {"left": 1050};
+            var obj2 = {"left": 225};
+            time = setInterval(autoplay, 4200);
+            function autoplay() {
+                animate(zdXiaoMeiNv, obj1, function () {
+                    animate(zdXiaoMeiNv, obj2)
+                })
+            };
+
+            //楼层跳跃和返回小火箭
+            var ul = document.getElementsByClassName("lz")[0];
+            var xhj = document.getElementsByClassName("xhj")[0];
+            var lzLiArr = ul.children;
+            var leader = 0, timer = null, target = 0;
+            for (var i = 0; i < lzLiArr.length; i++) {
+                lzLiArr[i].index = i;
+                lzLiArr[i].onclick = function () {
+                    clearInterval(timer);
+                    target = document.getElementsByClassName("lz" + this.index)[0].offsetTop;
+                    timer = setInterval(function () {
+                        var step = (target - leader) / 10;
+                        step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                        leader = leader + step;
+                        window.scrollTo(0, leader);
+//                        console.log(1);
+                        if (Math.abs(target - leader) <= Math.abs(step)) {
+                            clearInterval(timer);
+                        }
+                    }, 30);
+                };
+            }
+            xhj.onclick = function () {
+                clearInterval(timer);
+                timer = setInterval(function () {
+                    target = 0;
+                    var step = (target - leader) / 10;
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    leader = leader + step;
+                    window.scrollTo(0, leader);
+                    console.log(1);
+                    if (Math.abs(target - leader) <= Math.abs(step)) {
+                        clearInterval(timer);
+                    }
+                }, 30);
+            }
+            window.onscroll = function () {
+                if (scroll().top > 547) {
+                    $(".lz").show();
+                    show(xhj);
+                } else {
+                    $(".lz").hide();
+                    hide(xhj);
+                }
+                leader = scroll().top;
+            }
+
+            //最新资讯  tab栏
+            var ul1 = document.getElementsByClassName("tab_menu")[0];
+            var divTxt = document.getElementsByClassName("tab_box")[0];
+            var ulLiArr = ul1.children;
+            var divTxtArr = divTxt.children;
+            for (var i = 0; i < ulLiArr.length; i++) {
+                ulLiArr[i].index = i;
+                ulLiArr[i].onmouseover = function () {
+                    for (var j = 0; j < ulLiArr.length; j++) {
+                        ulLiArr[j].className = "";
+                        divTxtArr[j].className = "hide";
+                    }
+                    this.className = "current";
+                    divTxtArr[this.index].className = "";
+                }
+            }
+
+            //攻略大全  tab栏
+            var Raiders_tit = document.getElementsByClassName("Raiders_tit")[0];
+            var Raiders_titArr = Raiders_tit.children;
+            for (var i = 0; i < Raiders_titArr.length; i++) {
+                Raiders_titArr[i].onmouseover = function () {
+                    $(this).addClass("current").siblings("li").removeClass("current");
+                    $(".Raiders_txt>div").eq($(this).index()).removeClass("hide").siblings("div").addClass("hide");
+                }
+            }
+
+            //同人作品  tab栏  高亮显示
+            var works_tit = document.getElementsByClassName("works_tit")[0];
+            var works_titLi = works_tit.getElementsByTagName("li");
+            var tab_box = document.getElementById("aaa");
+            var tab_boxDiv = tab_box.getElementsByTagName("div");
+            for (var i = 0; i < works_titLi.length; i++) {
+                works_titLi[i].index = i;
+                works_titLi[i].onmouseover = function () {
+                    for (var j = 0; j < works_titLi.length; j++) {
+                        works_titLi[j].className = "";
+                        tab_boxDiv[j].className = "cf cb hide";
+                    }
+                    this.className = "current";
+                    tab_boxDiv[this.index].className = "cf cb";
+                }
+            }
+
+            //给header nav 部分的li标签添加事件
+            //鼠标进去，下面的dl滑动进入
+            $(".main-nav-l").mouseenter(function () {
+                $(this).children(".sub-nav").stop().slideDown();
+            })
+
+            //鼠标离开，下面的dl滑动离开
+            $(".main-nav-l").mouseleave(function () {
+                $(this).children(".sub-nav").stop().slideUp();
+            })
+
+            //banner轮播图
+            var arrForJson = [
+                {   //  1
+                    "width": 200,
+                    "top": 20,
+                    "left": 130,
+                    "opacity": 0.2,
+                    "z-index": 2
+                },
+                {  // 2
+                    "width": 400,
+                    "top": 60,
+                    "left": 80,
+                    "opacity": 0.7,
+                    "z-index": 3
+                },
+                {   // 3
+                    width: 600,
+                    top: 40,
+                    left: 300,
+                    opacity: 1,
+                    "z-index": 4
+                },
+                {  // 4
+                    width: 400,
+                    top: 60,
+                    left: 700,
+                    opacity: 0.7,
+                    "z-index": 3
+                },
+                {   //5
+                    width: 200,
+                    top: 20,
+                    left: 850,
+                    opacity: 0.2,
+                    "z-index": 2
+                }
+            ];
+
+            $(".left").fadeIn(2000);
+            $(".right").fadeIn(2000);
+
+            //banner部分
+
+            var slide = document.getElementById("slide");
+            var liArr = slide.children[0].children;
+            var arrow = document.getElementById("arrow");
+            var aArr = arrow.children;
+            var flag = true;
+
+            slide.onmouseenter = function () {
+                animate(arrow, {"opacity": 1});
+            }
+            slide.onmouseleave = function () {
+                animate(arrow, {"opacity": 0});
+            }
+
+            autoPlay();
+            aArr[1].onclick = function () {
+                if (flag == true) {
+                    flag = false;
+                    autoPlay(true)
+                }
+            }
+            aArr[0].onclick = function () {
+                if (flag == true) {
+                    flag = false;
+                    autoPlay(false)
+                }
+            }
+
+            function autoPlay(bool) {
+                if (bool != undefined) {
+                    if (bool === true) {
+                        arrForJson.push(arrForJson.shift());
+                    } else {
+                        arrForJson.unshift(arrForJson.pop());
+                    }
+                }
+                for (var i = 0; i < liArr.length; i++) {
+                    animate(liArr[i], arrForJson[i], function () {
+                        flag = true;
+                    });
+                }
+            }
+
+
+            //        阴阳师手游网页轮播图
+            var all = document.getElementById("all");
+            var screen = all.firstElementChild || all.firstChild;
+            var ul = screen.children[0];
+            var divArr = ul.children;
+            var ol = screen.children[1];
+            var arr = screen.children[2];
+            var left = arr.children[0];
+            var right = arr.children[1];
+
+            var imgWidth = screen.offsetWidth;
+
+//                ul末尾添加一个div
+            var Newbox =divArr[0].cloneNode(true);
+            ul.appendChild(Newbox);
+
+            var NewdivArr = ul.children;
+//            console.log(ul);
+            for(var i=0;i<divArr.length-1;i++){
+                var olNewLi = document.createElement("li");
+                olNewLi.innerHTML = i+1;
+                ol.appendChild(olNewLi);
+            }
+            var olLiArr = ol.children;
+            olLiArr[0].className = "current";
+            for(var i=0;i<olLiArr.length;i++) {
+                olLiArr[i].onmouseover = function () {
+                    for (var j = 0; j < olLiArr.length; j++) {
+                        olLiArr[j].className = "";
+                    }
+                    this.className = "current";
+                    key = square = this.innerHTML - 1;
+                    animate1(ul, -(this.innerHTML - 1) * imgWidth);
+                }
+            }
+
+            var square = 0;
+            var key = 0;
+
+            right.onclick = autoPlay5;
+
+            left.onclick = autoPlay6;
+
+            var timer = setInterval(autoPlay5,3500);
+
+
+            all.onmouseover = function () {
+                clearInterval(timer);
+                arr.style.display = "block";
+            }
+            all.onmouseout = function () {
+                timer = setInterval(autoPlay5,3500);
+                arr.style.display = "none";
+            }
+
+            function autoPlay5() {
+                square++;
+                if(square == olLiArr.length){
+                    square = 0;
+                }
+                key++;
+                if(key == NewdivArr.length){
+                    key = 1;
+                    ul.style.left = 0;
+                }
+                for(var i=0;i<olLiArr.length;i++){
+                    olLiArr[i].className = "";
+                }
+                olLiArr[square].className = "current";
+                animate1(ul,-key*imgWidth);
+            }
+
+
+            function autoPlay6() {
+                square--;
+                if(square == -1){
+                    square = olLiArr.length-1;//为了代码的拓展性，最大索引值改为length-1；
+                }
+                key--;
+                if(key == -1){
+                    key = NewdivArr.length-2;//滑向这一张，索引值为4；
+                    ul.style.left = -(NewdivArr.length-1)*4*imgWidth+"px";
+                }
+                for(var i=0;i<olLiArr.length;i++){
+                    olLiArr[i].className = "";
+                }
+                olLiArr[square].className = "current";
+                animate1(ul,-key*imgWidth);
+            }
+        }
+        // 匀速动画封装
+        function animate1(ele, target) {
+            clearInterval(ele.timer);
+            ele.timer = setInterval(function () {
+                var step = target > ele.offsetLeft ? 10 : -10;
+                var leader = ele.offsetLeft;
+                ele.style.left = ele.offsetLeft + step + "px";
+                if (Math.abs(target - leader) <=Math.abs(step)) {
+                    ele.style.left = target + "px";
+                    clearInterval(ele.timer);
+                }
+            }, 30);
+        }
+
+    </script>
+</head>
+
+<body>
+    <!--header加nav栏-->
+    <div class="header">
+        <div class="web">
+            <!-- 主导航-->
+            <div class="main-nav-l">
+                <ul>
+                    <li><a href="#">官网首页</a></li>
+                    <li><a href="#">近期热点</a></li>
+                    <li><a href="#">游戏福利</a></li>
+                    <li><a href="#">热门专区</a></li>
+                    <li><a href="#">用户互动</a></li>
+                </ul>
+                <!-- 下拉子导航-->
+                <div class="sub-nav">
+                    <dl>
+                        <dd><a href="javascript:void(0);">新游资讯</a></dd>
+                        <dd><a href="javascript:void(0);">产业动态</a></dd>
+                        <dd><a href="javascript:void(0);">硬件资讯</a></dd>
+                        <dd><a href="javascript:void(0);">游戏资讯</a></dd>
+                        <dd><a href="javascript:void(0);">攻略站</a></dd>
+                    </dl>
+                    <dl>
+                        <dd><a href="javascript:void(0);">游戏礼包</a></dd>
+                        <dd><a href="javascript:void(0);">积分商城</a></dd>
+                        <dd><a href="javascript:void(0);">热门活动</a></dd>
+                        <dd><a href="javascript:void(0);">综合讨论</a></dd>
+                        <dd><a href="javascript:void(0);">锦囊福利</a></dd>
+                    </dl>
+                    <dl>
+                        <dd><a href="javascript:void(0);">皇室战争</a></dd>
+                        <dd><a href="javascript:void(0);">倩女幽魂</a></dd>
+                        <dd><a href="javascript:void(0);">倚天屠龙记</a></dd>
+                        <dd><a href="javascript:void(0);">诛仙手游</a></dd>
+                        <dd><a href="javascript:void(0);">海岛奇兵</a></dd>
+                    </dl>
+                    <dl>
+                        <dd><a href="javascript:void(0);">在线客服</a></dd>
+                        <dd><a href="javascript:void(0);">活动中心</a></dd>
+                        <dd><a href="javascript:void(0);">官方论坛</a></dd>
+                        <dd><a href="javascript:void(0);">官方微信</a></dd>
+                        <dd><a href="javascript:void(0);">官方微博</a></dd>
+                    </dl>
+
+                </div>
+            </div>
+            <div class="main-nav-r">
+                <ul>
+                    <li><a href="登陆页马洋/dengluye.html">登录</a></li>
+                    <li><a href="项目  赵萌/01-注册界面.html">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--banner部分-->
+    <div class="banner">
+        <div class="left" ><img src="images/1.gif"/></div>
+        <div class="wrap" id="wrap">
+            <div class="slide" id="slide">
+                <ul>
+                    <li><a href="javascript:;"><img src="images/banner-2.jpg" alt=""/></a></li>
+                    <li><a href="javascript:;"><img src="images/banner-2.jpg" alt=""/></a></li>
+                    <li><a href="javascript:;"><img src="images/banner-2.jpg" alt=""/></a></li>
+                    <li><a href="javascript:;"><img src="images/banner-2.jpg" alt=""/></a></li>
+                    <li><a href="javascript:;"><img src="images/banner-2.jpg" alt=""/></a></li>
+                </ul>
+                <div class="arrow" id="arrow">
+                    <a href="javascript:;" class="prev"></a>
+                    <a href="javascript:;" class="next"></a>
+                </div>
+            </div>
+        </div>
+        <div class="right"><img src="images/2.gif"/></div>
+    </div>
+
+    <!--楼层跳跃-->
+    <ul class="lz">
+        <li>首页</li>
+        <li>攻略大全</li>
+        <li>同人作品</li>
+        <li>游戏视频</li>
+        <li>精美人物例绘</li>
+    </ul>
+    <!--返回顶部小火箭-->
+    <div class="xhj">
+        <img src="images/Top.jpg" alt=""/>
+    </div>
+
+    <div class="navW ov lz0">
+        <div class="nav web">
+            <ul>
+                <li class="tt1"><a href="闫帅/特效页面.html" target="_blank"><p>首页</p><i></i></a></li>
+                <li class="tt2"><a href="闫帅/特效页面.html" target="_blank"><p>式神</p><i></i></a></li>
+                <li class="tt3"><a href="闫帅/特效页面.html" target="_blank"><p>资讯</p><i></i></a></li>
+                <li class="tt4"><a href="赵一谦项目/index.html" target="_blank"><p>攻略</p><i></i></a></li>
+                <li class="tt5"><a href="赵一谦项目/index.html" target="_blank"><p>视频</p><i></i></a></li>
+                <li class="tt6"><a href="赵一谦项目/index.html" target="_blank"><p>论坛</p><i></i></a></li>
+                <li class="tt7"><a href="赵一谦项目/index.html" target="_blank"><p>下载</p><i></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="db mt25 web cf cb">
+        <div class="fl newSHS">
+            <div class="tit fz16 fwb tac lh18 fl">
+                最<br/>新<br/>式<br/>神
+            </div>
+            <div class="txt fl">
+                <ul>
+                    <li>
+                        <a href="http://www.ptbus.com/yys/700947/" target="_blank">
+                            <img src="picture/img1.jpg"/>
+
+                            <p><i class="SHS_ssr">SSR</i>一目连</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ptbus.com/yys/701895/" target="_blank">
+                            <img src="picture/img2.jpg"/>
+
+                            <p><i class="SHS_sr">SR</i>般若</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ptbus.com/yys/699814/" target="_blank">
+                            <img src="picture/img3.jpg"/>
+
+                            <p><i class="SHS_ssr">SSR</i>妖刀姬</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="fr hotSHS">
+            <div class="tit fz16 fwb tac lh18 fl">
+                热<br/>门<br/>式<br/>神
+            </div>
+            <div class="txt fl">
+                <ul>
+                    <li>
+                        <a href="http://www.ptbus.com/yys/697016/" target="_blank">
+                            <img src="picture/img4.jpg"/>
+
+                            <p><i class="SHS_sr">SR</i>姑获鸟</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ptbus.com/yys/699989/" target="_blank">
+                            <img src="picture/img5.jpg"/>
+
+                            <p><i class="SHS_ssr">SSR</i>茨木童子</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ptbus.com/yys/697629/" target="_blank">
+                            <img src="picture/img6.jpg"/>
+
+                            <p><i class="SHS_sr">SR</i>白狼</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ptbus.com/yys/699702/" target="_blank">
+                            <img src="picture/img7.jpg"/>
+
+                            <p><i class="SHS_ssr">SSR</i>大天狗</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.ptbus.com/yys/702529/" target="_blank">
+                            <img src="picture/img8.jpg"/>
+
+                            <p><i class="SHS_sr">SR</i>镰鼬</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mbg1">
+        <div class="web cf cb">
+            <div class="fl news">
+                <div class="newsTOP tac ov lh26">
+                    <h2><a href="http://www.ptbus.com/yys/704692/" target="_blank" title="">阴阳师召唤阵激活活动情报 兑换可得黑达</a></h2>
+
+                    <p><a href="http://www.ptbus.com/yys/703910/" target="_blank" title="">12月1日维护更新公告</a>|<a
+                            href="http://www.ptbus.com/yys/698918/" target="_blank">肝六星式神资源需求</a></p>
+
+                    <h2><a href="http://www.ptbus.com/yys/703942/" target="_blank" title="">阴阳师12月1日更新改动分析</a></h2>
+
+                    <p><a href="http://www.ptbus.com/yys/702641/" target="_blank" title="">石距副本奖励最大化</a>|<a
+                            href="http://www.ptbus.com/yys/700988/">悬赏妖怪查找</a></p>
+                </div>
+                <div class="newsList jyTable cf cb ov">
+                    <ul class="tab_menu tit tac fl">
+                        <li class="current">最<br/>新</li>
+                        <li>资<br/>讯</li>
+                        <li>攻<br/>略</li>
+                        <li>视<br/>频</li>
+                    </ul>
+                    <div class="txt fl ov tab_box">
+                        <div>
+                            <ul>
+                                <li>
+                                    <p>
+                                        [资讯]</span><a href="http://www.ptbus.com/yys/704692/" title="" target="_blank">阴阳师召唤阵激活活动情报
+                                        兑换可得黑达摩</a></p>12/07
+                                </li>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.ptbus.com/yys/704627/" title="" target="_blank">鬼王战黑科技式神介绍
+                                        越打越强的跳跳弟弟</a></p>12/06
+                                </li>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.huya.com/g/100004?rso=xy" title="" target="_blank">阴阳师超强套路、欧皇画符、基础讲解
+                                        尽在虎牙直播</a></p>12/06
+                                </li>
+                                <li>
+                                    <p>
+                                        [资讯]</span><a href="http://www.ptbus.com/yys/704536/" title="" target="_blank">超女冠军vs人气coser
+                                        阴阳师同人新曲好评上线</a></p>12/06
+                                </li>
+                                <li>
+                                    <p>
+                                        [资讯]</span><a href="http://www.ptbus.com/yys/704397/" title="" target="_blank">阴阳师现身魔都CP19
+                                        人气爆棚high翻全场</a></p>12/05
+                                </li>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.ptbus.com/yys/704126/" title="" target="_blank">阴阳师手游常见阵容分析
+                                        哪些式神万金油</a></p>12/02
+                                </li>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.ptbus.com/yys/703870/" title="" target="_blank">阴阳师中那些原型长相惊悚的御魂
+                                        你觉得哪个好看</a></p>12/02
+                                </li>
+                            </ul>
+                            <a href="http://www.ptbus.com/yys/list/" target="_blank" class="more">查看更多</a>
+                        </div>
+                        <div class="hide">
+                            <ul>
+                                <li>
+                                    <p>
+                                        [资讯]</span><a href="http://www.ptbus.com/yys/704692/" title="" target="_blank">阴阳师召唤阵激活活动情报
+                                        兑换可得黑达摩</a></p>12/07
+                                </li>
+                                <li>
+                                    <p>
+                                        [资讯]</span><a href="http://www.ptbus.com/yys/704536/" title="" target="_blank">超女冠军vs人气coser
+                                        阴阳师同人新曲好评上线</a></p>12/06
+                                </li>
+                                <li>
+                                    <p>
+                                        [资讯]</span><a href="http://www.ptbus.com/yys/704397/" title="" target="_blank">阴阳师现身魔都CP19
+                                        人气爆棚high翻全场</a></p>12/05
+                                </li>
+                                <li>
+                                    <p>
+                                        [资讯]</span><a href="http://www.ptbus.com/yys/703942/" title="" target="_blank">阴阳师12月1日更新改动分析</a>
+                                    </p>12/01
+                                </li>
+                                <li>
+                                    <p>
+                                        [资讯]</span><a href="http://www.ptbus.com/yys/703910/" title="" target="_blank">12月1日维护更新公告</a>
+                                    </p>12/01
+                                </li>
+                                <li>
+                                    <p>
+                                        [资讯]</span><a href="http://www.ptbus.com/yys/703751/" title="" target="_blank">《阴阳师》同人MMD再出佳作
+                                        八百比丘尼惊艳起舞</a></p>11/30
+                                </li>
+                                <li>
+                                    <p>
+                                        [资讯]</span><a href="http://www.ptbus.com/yys/703125/" title="" target="_blank">次元突破！《阴阳师》COSPLAY大赛佳作共赏</a>
+                                    </p>11/25
+                                </li>
+                            </ul>
+                            <a href="http://www.ptbus.com/yys/news/" target="_blank" class="more">查看更多</a>
+                        </div>
+                        <div class="hide">
+                            <ul>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.ptbus.com/yys/704627/" title="" target="_blank">鬼王战黑科技式神介绍
+                                        越打越强的跳跳弟弟</a></p>12/06
+                                </li>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.huya.com/g/100004?rso=xy" title="" target="_blank">阴阳师超强套路、欧皇画符、基础讲解
+                                        尽在虎牙直播</a></p>12/06
+                                </li>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.ptbus.com/yys/704126/" title="" target="_blank">阴阳师手游常见阵容分析
+                                        哪些式神万金油</a></p>12/02
+                                </li>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.ptbus.com/yys/703870/" title="" target="_blank">阴阳师中那些原型长相惊悚的御魂
+                                        你觉得哪个好看</a></p>12/02
+                                </li>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.ptbus.com/yys/703987/" title="" target="_blank">如何用好络新妇
+                                        反击流新套路值得尝试</a></p>12/02
+                                </li>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.ptbus.com/yys/703184/" title="" target="_blank">新人式神和御魂应该如何取舍
+                                        游戏中有何小技巧</a></p>12/02
+                                </li>
+                                <li>
+                                    <p>
+                                        [攻略]</span><a href="http://www.ptbus.com/yys/703689/" title="" target="_blank">画说百鬼夜行
+                                        十大可能成为新成员的妖怪</a></p>12/01
+                                </li>
+                            </ul>
+                            <a href="http://www.ptbus.com/yys/guide/" target="_blank" class="more">查看更多</a>
+                        </div>
+                        <div class="hide">
+                            <ul>
+                                <li>
+                                    <p>
+                                        [视频]</span><a href="http://www.ptbus.com/yys/702533/" title="" target="_blank">非酋痴汉弹唱《我要大天狗》
+                                        想要SSR的心情你懂吗</a></p>11/21
+                                </li>
+                                <li>
+                                    <p>
+                                        [视频]</span><a href="http://www.ptbus.com/yys/701670/" title="" target="_blank">阴阳师抽SSR几率最高的七种方式
+                                        你都知道吗</a></p>11/15
+                                </li>
+                                <li>
+                                    <p>
+                                        [视频]</span><a href="http://www.ptbus.com/yys/701096/" title="" target="_blank">阴阳师首部资料片“魑魅之卷”宣传PV</a>
+                                    </p>11/15
+                                </li>
+                                <li>
+                                    <p>
+                                        [视频]</span><a href="http://www.ptbus.com/yys/701103/" title="" target="_blank">阴阳师声优PV
+                                        看看你认识哪些声优</a></p>11/10
+                                </li>
+                                <li>
+                                    <p>
+                                        [视频]</span><a href="http://www.ptbus.com/yys/701097/" title="" target="_blank">阴阳师46连抽
+                                        这个游戏根本没有ssr</a></p>11/10
+                                </li>
+                                <li>
+                                    <p>
+                                        [视频]</span><a href="http://www.ptbus.com/yys/701069/" title="" target="_blank">阴阳师食发鬼双山兔过御魂十拿成就</a>
+                                    </p>11/10
+                                </li>
+                                <li>
+                                    <p>
+                                        [视频]</span><a href="http://www.ptbus.com/yys/667284/" title="" target="_blank">阴阳师手游百鬼夜行效果一览</a>
+                                    </p>06/07
+                                </li>
+                            </ul>
+                            <a href="http://www.ptbus.com/yys/video/" target="_blank" class="more">查看更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fr fouse">
+                <div class="tab_box BigPic">
+                    <div><a href="http://www.ptbus.com/yys/704646/" target="_blank"><img
+                            src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e364650502f4ca2be66b5ef8bdf52f2619361b5938f6341abbf75050bb1722644.jpg"/>
+
+                        <p>预约才3万人《阴阳师》日服版能打开日本市场吗？</p></a></div>
+                    <div class="hide"><a href="http://www.huya.com/g/100004?rso=xy" target="_blank"><img
+                            src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d685571b37ee521c8cd18d3eff6e14d8bd0c54c4da96c87fb8296696c9a1f696959dd33.jpg"/>
+
+                        <p>阴阳师超强套路、欧皇画符、基础讲解 尽在虎牙直播</p></a></div>
+                    <div class="hide"><a href="http://www.ptbus.com/yys/702533/" target="_blank"><img
+                            src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d6855715136e6ed393355fce7e55abed9d4190b0b010a0ffea5ef4679d72dad965921b7.jpg"/>
+
+                        <p>非酋痴汉弹唱《我要大天狗》 想要SSR的心情你懂吗</p></a></div>
+                    <div class="hide"><a href="http://www.ptbus.com/yys/701670/" target="_blank"><img
+                            src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d685571e59b53ba07a574d5e6f56e55af561c6860b699ca7328008bc2a75e4b18e66491.jpg"/>
+
+                        <p>阴阳师抽SSR几率最高的七种方式 你都知道吗</p></a></div>
+                </div>
+                <ul class="tab_menu MinPic">
+                    <li class="current"><img
+                            src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e364650502f4ca2be66b5ef8bdf52f2619361b5938f6341abbf75050bb1722644_1.jpg"/></a>
+                    </li>
+                    <li><img
+                            src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d685571b37ee521c8cd18d3eff6e14d8bd0c54c4da96c87fb8296696c9a1f696959dd33.jpg"/></a>
+                    </li>
+                    <li><img
+                            src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d6855715136e6ed393355fce7e55abed9d4190b0b010a0ffea5ef4679d72dad965921b7.jpg"/></a>
+                    </li>
+                    <li><img
+                            src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d685571e59b53ba07a574d5e6f56e55af561c6860b699ca7328008bc2a75e4b18e66491_1.jpg"/></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mbg2 lz1">
+        <div class="mbg2 web re">
+            <div class="mbg2Tit ab">
+                <i></i>
+                攻略大全
+            </div>
+            <div class="RaidersNews_Crumbs">
+                <p></p>
+                <span></span>
+            </div>
+            <div class="db cf cb re">
+                <div class="fl Raiders cf cb" style="padding-top:96px; z-index:5;">
+                    <ul class="Raiders_tit tab_menu fl">
+                        <li class="ren1 current">
+                            <i></i>
+
+                            <p></p>
+                        </li>
+                        <li class="ren2">
+                            <i></i>
+
+                            <p></p>
+                        </li>
+                        <li class="ren3">
+                            <i></i>
+
+                            <p></p>
+                        </li>
+                        <li class="ren4">
+                            <i></i>
+
+                            <p></p>
+
+                        </li>
+                    </ul>
+                    <div class="Raiders_txt fr tab_box fl">
+                        <div class="cf cb">
+                            <div class="fl RaidersPic ov lh20">
+                                <ul>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/698599/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b75052545d8f8966c720741104256d8831585fc80f502a5a3db1.jpg"/>
+                                                    </span>
+
+                                            <p>阴阳师安倍晴明怎么玩 晴明哪些技能和阵容厉害</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/699865/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b750b6a23dba0c6bb3e8b81a9466273e3b6f.jpg"/>
+                                                    </span>
+
+                                            <p>晴明配合哪种式神厉害 单点式神是首要选择</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/696487/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b750f8e502099dcf4cec55921cbab5bbc3fc.jpg"/>
+                                                    </span>
+
+                                            <p>阴阳师手游剧情18章黑晴明平民阵容分享</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/693787/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b750836dde2f96670085fc983c8855445ec7.jpg"/>
+                                                    </span>
+
+                                            <p>阴阳师手游安培晴明带什么技能 晴明技能分析</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="fr RaidersNews1 RaidersNews re">
+                                <ul class="RaidersNews_tit tab_menu ab cf cb">
+                                    <li class="current">
+                                        <i></i>
+
+                                        <p>斗技</p>
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <i></i>
+
+                                        <p>御魂</p>
+                                        <span></span>
+                                    </li>
+                                </ul>
+                                <div class="RaidersNews_txt tab_box">
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703987/" title=""
+                                                              target="_blank">如何用好络新妇 反击流新套路值得尝试</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703432/" title=""
+                                                              target="_blank">桃花妖斗技属性选择方法 2速4血6暴较为理想</a><span>11/29</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703473/" title=""
+                                                              target="_blank">能控能奶的SR 睡杀流核心式神食梦貘介绍</a><span>11/28</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703291/" title=""
+                                                              target="_blank">阴阳师惠比寿治疗效果计算公式说明</a><span>11/26</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702666/" title=""
+                                                              target="_blank">十大SSR生存现状 酒吞高端斗技使用率最佳</a><span>11/23</span>
+                                            </li>
+                                        </ul>
+                                        <div class="line"></div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702529/" title=""
+                                                              target="_blank">高端斗技必备式神 人手必备的SR式神镰鼬</a><span>11/21</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701232/" title=""
+                                                              target="_blank">最强硬控场式神凤凰火 让雄雄业火将你缠绕</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701633/" title=""
+                                                              target="_blank">复活流和拉条流解读 新版本新的阵容选择</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701526/" title=""
+                                                              target="_blank">魑魅之卷改版吸血姬介绍 残血普攻伤害逆天</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/700584/" title=""
+                                                              target="_blank">双面佛详细能力测评 虽然丑但实力数一数二</a><span>11/14</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="hide">
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703870/" title=""
+                                                              target="_blank">阴阳师中那些原型长相惊悚的御魂 你觉得哪个好看</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703184/" title=""
+                                                              target="_blank">新人式神和御魂应该如何取舍 游戏中有何小技巧</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703286/" title=""
+                                                              target="_blank">三星四星五星御魂全分析 到底谁适合过度</a><span>11/28</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703287/" title=""
+                                                              target="_blank">输出式神如何配置御魂 暴速攻依旧最佳选择</a><span>11/26</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703289/" title=""
+                                                              target="_blank">肉盾御魂选择 四号位抵抗用处增强</a><span>11/26</span>
+                                            </li>
+                                        </ul>
+                                        <div class="line"></div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703244/" title=""
+                                                              target="_blank">如何最低成本强化御魂副属性 需要循序渐进</a><span>11/25</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702993/" title=""
+                                                              target="_blank">R级式神黑科技 有肉有控制有输出的狸猫</a><span>11/24</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702640/" title=""
+                                                              target="_blank">御魂和式神应该如何提升 如何快速强化战力</a><span>11/22</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701280/" title=""
+                                                              target="_blank">魑魅之卷全御魂改版分析</a><span>11/11</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/694776/" title=""
+                                                              target="_blank">阴阳师手游御魂推荐 应该在商店优先购买的御魂</a><span>11/10</span>
+                                            </li>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf cb hide">
+                            <div class="fl RaidersPic ov lh20">
+                                <ul>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/695391/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b750bd8ab62fda6c81d4f0b1e2b07b338c3f.jpg"/>
+                                                    </span>
+
+                                            <p>阴阳师手游神乐技能怎么样 神乐技能哪些好</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/697975/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b7503a37ce75e9f405aecfb1b6a32317a4f5.jpg"/>
+                                                    </span>
+
+                                            <p>阴阳师复活流体系神乐童男解读 打出恶心风范</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/697785/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b750701af3e691ee2b5684ecfea7640ba111.jpg"/>
+                                                    </span>
+
+                                            <p>狗粮队长哪家强 盘点那些适合带队的式神</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/698649/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b750321980ab88dbbdcd4445607efb4931e5.jpg"/>
+                                                    </span>
+
+                                            <p>阴阳师手游神乐技能讲解 面对疾风翩翩起舞</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="fr RaidersNews3 RaidersNews re">
+                                <ul class="RaidersNews_tit tab_menu ab cf cb">
+                                    <li class="current">
+                                        <i></i>
+
+                                        <p>斗技</p>
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <i></i>
+
+                                        <p>御魂</p>
+                                        <span></span>
+                                    </li>
+                                </ul>
+                                <div class="RaidersNews_txt tab_box">
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703987/" title=""
+                                                              target="_blank">如何用好络新妇 反击流新套路值得尝试</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703432/" title=""
+                                                              target="_blank">桃花妖斗技属性选择方法 2速4血6暴较为理想</a><span>11/29</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703473/" title=""
+                                                              target="_blank">能控能奶的SR 睡杀流核心式神食梦貘介绍</a><span>11/28</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703291/" title=""
+                                                              target="_blank">阴阳师惠比寿治疗效果计算公式说明</a><span>11/26</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702666/" title=""
+                                                              target="_blank">十大SSR生存现状 酒吞高端斗技使用率最佳</a><span>11/23</span>
+                                            </li>
+                                        </ul>
+                                        <div class="line"></div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702529/" title=""
+                                                              target="_blank">高端斗技必备式神 人手必备的SR式神镰鼬</a><span>11/21</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701232/" title=""
+                                                              target="_blank">最强硬控场式神凤凰火 让雄雄业火将你缠绕</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701633/" title=""
+                                                              target="_blank">复活流和拉条流解读 新版本新的阵容选择</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701526/" title=""
+                                                              target="_blank">魑魅之卷改版吸血姬介绍 残血普攻伤害逆天</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/700584/" title=""
+                                                              target="_blank">双面佛详细能力测评 虽然丑但实力数一数二</a><span>11/14</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="hide">
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703870/" title=""
+                                                              target="_blank">阴阳师中那些原型长相惊悚的御魂 你觉得哪个好看</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703184/" title=""
+                                                              target="_blank">新人式神和御魂应该如何取舍 游戏中有何小技巧</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703286/" title=""
+                                                              target="_blank">三星四星五星御魂全分析 到底谁适合过度</a><span>11/28</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703287/" title=""
+                                                              target="_blank">输出式神如何配置御魂 暴速攻依旧最佳选择</a><span>11/26</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703289/" title=""
+                                                              target="_blank">肉盾御魂选择 四号位抵抗用处增强</a><span>11/26</span>
+                                            </li>
+                                        </ul>
+                                        <div class="line"></div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703244/" title=""
+                                                              target="_blank">如何最低成本强化御魂副属性 需要循序渐进</a><span>11/25</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702993/" title=""
+                                                              target="_blank">R级式神黑科技 有肉有控制有输出的狸猫</a><span>11/24</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702640/" title=""
+                                                              target="_blank">御魂和式神应该如何提升 如何快速强化战力</a><span>11/22</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701280/" title=""
+                                                              target="_blank">魑魅之卷全御魂改版分析</a><span>11/11</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/694776/" title=""
+                                                              target="_blank">阴阳师手游御魂推荐 应该在商店优先购买的御魂</a><span>11/10</span>
+                                            </li>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf cb hide">
+                            <div class="fl RaidersPic ov lh20">
+                                <ul>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/697779/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b750b968f8bd935af30f405302b82869e745.jpg"/>
+                                                    </span>
+
+                                            <p>阴阳师手游个人结界突破奖励玩法说明</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/698008/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b75023ea6eb3fc9a7166976982139419324f.jpg"/>
+                                                    </span>
+
+                                            <p>阴阳师手游式神和阴阳师提升的小技巧</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/698989/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d68557119a20e104fb4d83cf0002a419673b7501ee614980420222ffd0ca90dd32b88a2.jpg"/>
+                                                    </span>
+
+                                            <p>阴阳师源博雅介绍 高端御魂觉醒必备阴阳师</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/700741/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404fa0f816ca65d24fbdd811a64b2f991df7.jpg"/>
+                                                    </span>
+
+                                            <p>阴阳师手游同人cos鉴赏 真实还原阴阳师源博雅</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="fr RaidersNews4 RaidersNews re">
+                                <ul class="RaidersNews_tit tab_menu ab cf cb">
+                                    <li class="current">
+                                        <i></i>
+
+                                        <p>斗技</p>
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <i></i>
+
+                                        <p>御魂</p>
+                                        <span></span>
+                                    </li>
+                                </ul>
+                                <div class="RaidersNews_txt tab_box">
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703987/" title=""
+                                                              target="_blank">如何用好络新妇 反击流新套路值得尝试</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703432/" title=""
+                                                              target="_blank">桃花妖斗技属性选择方法 2速4血6暴较为理想</a><span>11/29</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703473/" title=""
+                                                              target="_blank">能控能奶的SR 睡杀流核心式神食梦貘介绍</a><span>11/28</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703291/" title=""
+                                                              target="_blank">阴阳师惠比寿治疗效果计算公式说明</a><span>11/26</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702666/" title=""
+                                                              target="_blank">十大SSR生存现状 酒吞高端斗技使用率最佳</a><span>11/23</span>
+                                            </li>
+                                        </ul>
+                                        <div class="line"></div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702529/" title=""
+                                                              target="_blank">高端斗技必备式神 人手必备的SR式神镰鼬</a><span>11/21</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701232/" title=""
+                                                              target="_blank">最强硬控场式神凤凰火 让雄雄业火将你缠绕</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701633/" title=""
+                                                              target="_blank">复活流和拉条流解读 新版本新的阵容选择</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701526/" title=""
+                                                              target="_blank">魑魅之卷改版吸血姬介绍 残血普攻伤害逆天</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/700584/" title=""
+                                                              target="_blank">双面佛详细能力测评 虽然丑但实力数一数二</a><span>11/14</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="hide">
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703870/" title=""
+                                                              target="_blank">阴阳师中那些原型长相惊悚的御魂 你觉得哪个好看</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703184/" title=""
+                                                              target="_blank">新人式神和御魂应该如何取舍 游戏中有何小技巧</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703286/" title=""
+                                                              target="_blank">三星四星五星御魂全分析 到底谁适合过度</a><span>11/28</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703287/" title=""
+                                                              target="_blank">输出式神如何配置御魂 暴速攻依旧最佳选择</a><span>11/26</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703289/" title=""
+                                                              target="_blank">肉盾御魂选择 四号位抵抗用处增强</a><span>11/26</span>
+                                            </li>
+                                        </ul>
+                                        <div class="line"></div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703244/" title=""
+                                                              target="_blank">如何最低成本强化御魂副属性 需要循序渐进</a><span>11/25</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702993/" title=""
+                                                              target="_blank">R级式神黑科技 有肉有控制有输出的狸猫</a><span>11/24</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702640/" title=""
+                                                              target="_blank">御魂和式神应该如何提升 如何快速强化战力</a><span>11/22</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701280/" title=""
+                                                              target="_blank">魑魅之卷全御魂改版分析</a><span>11/11</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/694776/" title=""
+                                                              target="_blank">阴阳师手游御魂推荐 应该在商店优先购买的御魂</a><span>11/10</span>
+                                            </li>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf cb hide">
+                            <div class="fl RaidersPic ov lh20">
+                                <ul>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/703751/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e366f89c3db2ff436bf4706700511abadeb3d3fcb079c532359496ef2d870aa86.jpg"/>
+                                                    </span>
+
+                                            <p>《阴阳师》同人MMD再出佳作 八百比丘尼惊艳起舞</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/701663/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111eea18d49973b0a08308011b8039fe01262091754f07fdaefe451c9c8175509a31.jpg"/>
+                                                    </span>
+
+                                            <p>新阴阳师八百比丘尼解读 偏重持续作战能力的阴阳师</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/700459/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e6c6d576049c1238a1272b57fc46a569b01727d5ab46de3572b5282ce3759558cb2fe0496398be0c2.png"/>
+                                                    </span>
+
+                                            <p><font color='#FF0000'>组队斗技&amp;好友对战?阴阳师新版本更新情报</font></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.ptbus.com/yys/700338/" target="_blank">
+                                                    <span class="Mask">
+                                                        <i class="overlay"></i>
+                                                        <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111ef006f10adf9c48358421e10430145233bd199e4f0f168fe7d2de45d6dd2d022d.jpg"/>
+                                                    </span>
+
+                                            <p>生死流转人鱼梦 《阴阳师》八百比丘尼情报放送</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="fr RaidersNews2 RaidersNews re">
+                                <ul class="RaidersNews_tit tab_menu ab cf cb">
+                                    <li class="current">
+                                        <i></i>
+
+                                        <p>斗技</p>
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <i></i>
+
+                                        <p>御魂</p>
+                                        <span></span>
+                                    </li>
+                                </ul>
+                                <div class="RaidersNews_txt tab_box">
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703987/" title=""
+                                                              target="_blank">如何用好络新妇 反击流新套路值得尝试</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703432/" title=""
+                                                              target="_blank">桃花妖斗技属性选择方法 2速4血6暴较为理想</a><span>11/29</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703473/" title=""
+                                                              target="_blank">能控能奶的SR 睡杀流核心式神食梦貘介绍</a><span>11/28</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703291/" title=""
+                                                              target="_blank">阴阳师惠比寿治疗效果计算公式说明</a><span>11/26</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702666/" title=""
+                                                              target="_blank">十大SSR生存现状 酒吞高端斗技使用率最佳</a><span>11/23</span>
+                                            </li>
+                                        </ul>
+                                        <div class="line"></div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702529/" title=""
+                                                              target="_blank">高端斗技必备式神 人手必备的SR式神镰鼬</a><span>11/21</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701232/" title=""
+                                                              target="_blank">最强硬控场式神凤凰火 让雄雄业火将你缠绕</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701633/" title=""
+                                                              target="_blank">复活流和拉条流解读 新版本新的阵容选择</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701526/" title=""
+                                                              target="_blank">魑魅之卷改版吸血姬介绍 残血普攻伤害逆天</a><span>11/18</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/700584/" title=""
+                                                              target="_blank">双面佛详细能力测评 虽然丑但实力数一数二</a><span>11/14</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="hide">
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703870/" title=""
+                                                              target="_blank">阴阳师中那些原型长相惊悚的御魂 你觉得哪个好看</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703184/" title=""
+                                                              target="_blank">新人式神和御魂应该如何取舍 游戏中有何小技巧</a><span>12/02</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703286/" title=""
+                                                              target="_blank">三星四星五星御魂全分析 到底谁适合过度</a><span>11/28</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703287/" title=""
+                                                              target="_blank">输出式神如何配置御魂 暴速攻依旧最佳选择</a><span>11/26</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703289/" title=""
+                                                              target="_blank">肉盾御魂选择 四号位抵抗用处增强</a><span>11/26</span>
+                                            </li>
+                                        </ul>
+                                        <div class="line"></div>
+                                        <ul>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/703244/" title=""
+                                                              target="_blank">如何最低成本强化御魂副属性 需要循序渐进</a><span>11/25</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702993/" title=""
+                                                              target="_blank">R级式神黑科技 有肉有控制有输出的狸猫</a><span>11/24</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/702640/" title=""
+                                                              target="_blank">御魂和式神应该如何提升 如何快速强化战力</a><span>11/22</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/701280/" title=""
+                                                              target="_blank">魑魅之卷全御魂改版分析</a><span>11/11</span>
+                                            </li>
+                                            <li>
+                                                [攻略]</span><a href="http://www.ptbus.com/yys/694776/" title=""
+                                                              target="_blank">阴阳师手游御魂推荐 应该在商店优先购买的御魂</a><span>11/10</span>
+                                            </li>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fr Timetable">
+                    <ul class="tab_menu Timetable_tit cf cb">
+                        <li class="current">
+                            <p>活动时间表</p>
+                            <span></span>
+                        </li>
+                        <li>
+                            <p>御魂刷新时间表</p>
+                            <span></span>
+                        </li>
+                    </ul>
+                    <div class="tab_box Timetable_txt">
+                        <div class="hodong">
+                            <ul>
+                                <li>
+                                    <i><img src="picture/time_ic1.png"/></i>
+
+                                    <p>斗技</p>
+                                    <span>12:00-13:00</span>
+                                </li>
+                                <li>
+                                    <i><img src="picture/time_ic2.png"/></i>
+
+                                    <p>妖怪退治</p>
+                                    <span>13:00-14:00</span>
+                                </li>
+                                <li>
+                                    <i><img src="picture/time_ic4.png"/></i>
+
+                                    <p>悬赏封印</p>
+                                    <span>05:00,18:00</span>
+                                </li>
+                                <li>
+                                    <i><img src="picture/time_ic3.png"/></i>
+
+                                    <p>狩猎战</p>
+                                    <span>19:00-21:00</span>
+                                </li>
+                                <li>
+                                    <i><img src="picture/time_ic2.png"/></i>
+
+                                    <p>妖怪退治</p>
+                                    <span>20:00-21:00</span>
+                                </li>
+                                <li>
+                                    <i><img src="picture/time_ic1.png"/></i>
+
+                                    <p>斗技</p>
+                                    <span>21:00-22:00</span>
+                                </li>
+                                <li>
+                                    <i><img src="picture/time_ic6.png"/></i>
+
+                                    <p>阴阳寮突破</p>
+                                    <span>周末奖励翻倍</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="refresh hide">
+                            <div class="refreshList">
+                                <strong>周一</strong>
+                                <ul class="sidenav">
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/10.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>雪幽魂</span>
+
+                                            <p>套装2：防御加成30%</p>
+
+                                            <p>套装4：造成伤害时有12%的概率冰冻目标</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/22.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>地藏像</span>
+
+                                            <p>套装2：生命加成15%</p>
+
+                                            <p>套装4：被暴击时生成一个能够吸收生命值10%的伤害的护盾，有30%的概率同时保护其他友方单位</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/3.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>鸣屋</span>
+
+                                            <p>套装2：攻击加成15%</p>
+
+                                            <p>套装4：攻击处于眩晕，冰冻，睡眠状态的单位时，造成额外30%的伤害</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/14.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>网切</span>
+
+                                            <p>套装2：暴击15%</p>
+
+                                            <p>套装4：暴击伤害无视目标20%防御</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="refreshList">
+                                <strong>周二</strong>
+                                <ul class="sidenav">
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/21.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>涅槃之火</span>
+
+                                            <p>套装2：生命加成15%</p>
+
+                                            <p>套装4：回合结束时，如果生命低于30%，回复自身15%的生命值</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/15.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>三味</span>
+
+                                            <p>套装2：暴击15%</p>
+
+                                            <p>套装4：处于被控制状态的友方单位，速度增加30点</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/9.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>招财猫</span>
+
+                                            <p>套装2：防御加成30%</p>
+
+                                            <p>套装4：回合开始时，50%概率获得2点鬼火</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/4.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>狰</span>
+
+                                            <p>套装2：攻击加成15%</p>
+
+                                            <p>套装4：携带者受到伤害时，35%概率使用普通攻击进行反击</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="refreshList">
+                                <strong>周三</strong>
+                                <ul class="sidenav">
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/23.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>魍魉之匣</span>
+
+                                            <p>套装2：效果抵抗12%</p>
+
+                                            <p>套装4：造成伤害时，有25%的概率为目标附加一个随机减益效果</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/20.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>被服</span>
+
+                                            <p>套装2：生命加成15%</p>
+
+                                            <p>套装4：受到伤害降低30%</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/1.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>阴摩罗</span>
+
+                                            <p>套装2：攻击加成15%</p>
+
+                                            <p>套装4：击杀单位时会获得3点鬼火</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/11.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>魅妖</span>
+
+                                            <p>套装2：防御加成30%</p>
+
+                                            <p>套装4：造成伤害时，有25%的概率混乱目标</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="refreshList">
+                                <strong>周四</strong>
+                                <ul class="sidenav">
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/8.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>反枕</span>
+
+                                            <p>套装2：防御加成30%</p>
+
+                                            <p>套装4：造成伤害时有20%的概率使目标睡眠1回合</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/2.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>心眼</span>
+
+                                            <p>套装2：攻击加成15%</p>
+
+                                            <p>套装4：对生命值低于30%的单位额外造成50%的伤害</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/17.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>树妖</span>
+
+                                            <p>套装2：生命加成15%</p>
+
+                                            <p>套装2：所有的治疗效果增加20%</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/16.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>针女</span>
+
+                                            <p>套装2：暴击15%</p>
+
+                                            <p>套装4：造成暴击时有40%概率对目标造成目标最大生命值10%的伤害，最高造成自身攻击力120%伤害</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="refreshList">
+                                <strong>周五</strong>
+                                <ul class="sidenav">
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/7.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>日女巳时</span>
+
+                                            <p>套装2：防御加成30%</p>
+
+                                            <p>套装4：造成伤害时，有20%概率击退目标30%行动条，对有增益效果的的单位触发概率增加10%</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/19.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>镜姬</span>
+
+                                            <p>套装2：生命加成15%</p>
+
+                                            <p>套装4：受到伤害时，有30%的概率反弹收到伤害的100%</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/18.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>钟灵</span>
+
+                                            <p>套装2：生命加成15%</p>
+
+                                            <p>套装4：造成伤害时有8%的几率眩晕目标</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class><img src="picture/13.jpg"/></a>
+
+                                        <div>
+                                            <i></i>
+                                            <span>破势</span>
+
+                                            <p>套装2：暴击15%</p>
+
+                                            <p>套装4：对生命值高于70%的单位造成额外40%的伤害</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="refreshList">
+                                <strong>周六</strong>
+                                <cite>随机御魂</cite>
+                            </div>
+                            <div class="refreshList">
+                                <strong>周日</strong>
+                                <cite>随机御魂</cite>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="all" id='all'>
+                <div class="screen" id="screen">
+                    <ul id="ul1">
+                        <div class="box1">
+                            <li><img src="picture/001.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/002.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt3.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt4.jpg" width="246" height="142"/></li>
+                        </div>
+                        <div class="box2">
+                            <li><img src="picture/zt5.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt6.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt7.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt8.jpg" width="246" height="142"/></li>
+                        </div>
+                        <div class="box3">
+                            <li><img src="picture/zt9.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt10.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt11.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt12.jpg" width="246" height="142"/></li>
+                        </div>
+
+                        <div class="box4">
+                            <li><img src="picture/zt13.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt14.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt15.jpg" width="246" height="142"/></li>
+                            <li><img src="picture/zt16.jpg" width="246" height="142"/></li>
+                        </div>
+
+                    </ul>
+                    <ol>
+                    </ol>
+                    <div id="arr">
+                        <span id="left"><</span>
+                        <span id="right">></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mbg4 lz2">
+        <div class="mbg4 web">
+            <div class="mbg4Tit re cf cb">
+                <i class="icon ab"></i>
+                <i class="line1 ab"></i>
+                <i class="line2 ab"></i>
+
+                <p>同人作品</p>
+                <span><a href="http://www.ptbus.com/yys/tag_39510/">更多作品</a></span>
+            </div>
+            <div class="works re">
+                <ul class="works_tit tab_menu">
+                    <li class="current">
+                        <i></i>
+
+                        <p>精选推荐</p>
+                        <span></span>
+                    </li>
+                    <li>
+                        <i></i>
+
+                        <p>同人立绘</p>
+                        <span></span>
+                    </li>
+                    <li>
+                        <i></i>
+
+                        <p>同人COS</p>
+                        <span></span>
+                    </li>
+                    <li>
+                        <i></i>
+
+                        <p>同人漫画</p>
+                        <span></span>
+                    </li>
+                </ul>
+                <div class="tab_box works_txt" id="aaa">
+                    <div class="cf cb">
+                        <ul>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/704536/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111ee0a6697c6749ecab132b704dde1775933789cb8f810420ef7e92d6892542b815.jpg"/>
+                                            </span>
+
+                                    <p>超女冠军vs人气coser 阴阳师同人新曲好评上线</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/703751/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e366f89c3db2ff436bf4706700511abadeb3d3fcb079c532359496ef2d870aa86_1.jpg"/>
+                                            </span>
+
+                                    <p>《阴阳师》同人MMD再出佳作 八百比丘尼惊艳起舞</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/701594/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111ec8410d8da077e4f68a82bde0785eb1a292f708911c78a0b17dd2f790c674f1df.jpg"/>
+                                            </span>
+
+                                    <p>“魑魅之卷”漫画大赛启动 《阴阳师》再出同人大招</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700773/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404fa7b6d8d21baf923134de3352ce368abf.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人漫画 条件反射的大天狗</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700751/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404fec837d98fbdd343c5d9afe44c5b7a5e0.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人cos 翩翩起舞的蝴蝶精</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700762/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404f4c083134a8fb5853b54eb5bb463c6006.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人cos 活泼水灵的鲤鱼精</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700790/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404fa643ef6ae394bfdd64d92cfb0fa402c0.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人漫画 走错片场的鬼使黑</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700794/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404f84ebc01a98c8f5303b2d9a674b96113b.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人漫画 有本事你就停下来</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cf cb hide">
+                        <ul>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700589/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e05386c5de1793742f5399c977d8ac2503f2c04ae3e6e2cd71801b7453e2a4396.jpg"/>
+                                            </span>
+
+                                    <p>最美灯姐哪家强 看看同人大触们笔下的青行灯</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/697239/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e5779d87d49f0e9b4f574ec28643bfff09deb30930da77b57bbe584be0f5ecea8.jpg"/>
+                                            </span>
+
+                                    <p>大触觉醒 《阴阳师》精彩同人插画欣赏</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/699044/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e6a1789022aa9f53b3915ca36d666bb4c957c07b4294aa9dbc38c1af0e70b5336.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师最美式神青灯行同人鉴赏 一流灯姐同人</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700592/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e05386c5de1793742f5399c977d8ac250202a783ca136dfc0afaf8da2c49c3810.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师手游同人立绘鉴赏 英姿飒爽的姑获鸟</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700600/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e05386c5de1793742f5399c977d8ac2501ea69c85612add8f0dc89dad8f98b20f.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师手游同人立绘鉴赏 狗崽投喂中心</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700609/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e05386c5de1793742f5399c977d8ac250b51d6a7c2ce08945c7758f4ca5424de8.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师手游同人漫画鉴赏 论欧洲人的七宗罪</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700612/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e05386c5de1793742f5399c977d8ac250f4c88914f9a485892a4569ecda46f73c.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人立绘鉴赏 阎魔大人我有罪</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700619/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e05386c5de1793742f5399c977d8ac2500f4cdd42f7b64e023f897242e198433f.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师手游同人立绘鉴赏 超萌恋人型雪女</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cf cb hide">
+                        <ul>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700751/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404fec837d98fbdd343c5d9afe44c5b7a5e0_1.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人cos 翩翩起舞的蝴蝶精</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700762/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404f4c083134a8fb5853b54eb5bb463c6006.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人cos 活泼水灵的鲤鱼精</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700768/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404f1688ef9db701d3379f955f08ec6797da.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人cos 伴随蓝天碧叶的萤草</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700746/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404face2e302c2aeb3b47dda5141fcc795b1.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人cos 黑白鬼使兄弟上阵</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700736/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404ff50e7ca60d4358f6e2adc527cf6dab58.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人cos 高还原度的鸟姐</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700741/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404fa0f816ca65d24fbdd811a64b2f991df7_1.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师手游同人cos鉴赏 真实还原阴阳师源博雅</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700664/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e05386c5de1793742f5399c977d8ac250e19a8adae5d5ab1eccbbea72f192083a.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师手游同人cos鉴赏 风雅之士大天狗</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700661/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e05386c5de1793742f5399c977d8ac2507a8c7da78ee72d3bf305cea26f91f6cc.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师手游同人cos鉴赏 出神入化的红叶coser</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cf cb hide">
+                        <ul>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700773/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404fa7b6d8d21baf923134de3352ce368abf.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人漫画 条件反射的大天狗</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700790/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404fa643ef6ae394bfdd64d92cfb0fa402c0_1.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人漫画 走错片场的鬼使黑</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700794/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404f84ebc01a98c8f5303b2d9a674b96113b_1.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人漫画 有本事你就停下来</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700788/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404f94c1b9e0864e94dc82c263459d9ed110.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人漫画 奇妙的SSR间的CP组合</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700784/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404f34764e43fad051d52d2024769d629fd2.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人漫画 狗崽的日常游戏</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700780/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404f0680213e56387cf4f71fd48a1ea8c11f.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人漫画 非洲阴阳师的日常</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700778/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e0efffa2a2b76f3b7d33893900c4d404f7284ef04f61b353acc4d955abfcf2132.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师同人漫画 欧洲阴阳师的日常</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.ptbus.com/yys/700609/" target="_blank">
+                                            <span class="Mask">
+                                                <i class="overlay"></i>
+                                                <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e05386c5de1793742f5399c977d8ac250b51d6a7c2ce08945c7758f4ca5424de8.jpg"/>
+                                            </span>
+
+                                    <p>阴阳师手游同人漫画鉴赏 论欧洲人的七宗罪</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="web	video lz3">
+        <div class="MoTit cf cb">
+            <p><i></i>游戏视频</p>
+            <span><a href="http://www.ptbus.com/yys/video/">更多视频+</a></span>
+        </div>
+        <div class="video_txt cf cb">
+            <ul>
+                <li>
+                    <a href="http://www.ptbus.com/yys/702533/" target="_blank">
+                                <span class="Mask">
+                                    <i class="overlay"></i>
+                                    <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d6855715136e6ed393355fce7e55abed9d4190b0b010a0ffea5ef4679d72dad965921b7_1.jpg"/>
+                                </span>
+
+                        <p>非酋痴汉弹唱《我要大天狗》 想要SSR的心情你懂吗</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.ptbus.com/yys/701670/" target="_blank">
+                                <span class="Mask">
+                                    <i class="overlay"></i>
+                                    <img src="picture/6ebc6208e20d6b024a85ee3905e83c118892bed35d685571e59b53ba07a574d5e6f56e55af561c6860b699ca7328008bc2a75e4b18e66491_2.jpg"/>
+                                </span>
+
+                        <p>阴阳师抽SSR几率最高的七种方式 你都知道吗</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.ptbus.com/yys/701096/" target="_blank">
+                                <span class="Mask">
+                                    <i class="overlay"></i>
+                                    <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e530ce318a5af4a618432eb484bf4764e0fb086ddaa3785a7637916012b07758c.jpg"/>
+                                </span>
+
+                        <p>阴阳师首部资料片“魑魅之卷”宣传PV</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.ptbus.com/yys/701103/" target="_blank">
+                                <span class="Mask">
+                                    <i class="overlay"></i>
+                                    <img src="picture/6ebc6208e20d6b024a85ee3905e83c11bf6709db587a64f406a84785943b111e530ce318a5af4a618432eb484bf4764ed4e018504e8bba34ef15e32a39235684.jpg"/>
+                                </span>
+
+                        <p>阴阳师声优PV 看看你认识哪些声优</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="web meitu lz4">
+        <div class="MoTit cf cb">
+            <!-- 横向小美女来回走动 -->
+            <div class="zdxiaomeinv web">
+            </div>
+            <p><i></i>精美人物立绘</p>
+        </div>
+        <div class="infopic re">
+            <div class="picbox re">
+                <ul class="gallery piclist">
+                    <li>
+                        <a href="picture/img1_1.jpg" data-lightbox="roadtrip">
+                            <span><img src="picture/img1_1.jpg"/></span>
+
+                            <p>安倍晴明</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="picture/img2_1.jpg" data-lightbox="roadtrip">
+                            <span><img src="picture/img2_1.jpg"/></span>
+
+                            <p>神乐</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="picture/img3_1.jpg" data-lightbox="roadtrip">
+                            <span><img src="picture/img3_1.jpg"/></span>
+
+                            <p>源博雅</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="picture/img4_1.jpg" data-lightbox="roadtrip">
+                            <span><img src="picture/img4_1.jpg"/></span>
+
+                            <p>八百比丘尼</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="picture/img5_1.jpg" data-lightbox="roadtrip">
+                            <span><img src="picture/img5_1.jpg"/></span>
+
+                            <p>青行灯</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="picture/img6_1.jpg" data-lightbox="roadtrip">
+                            <span><img src="picture/img6_1.jpg"/></span>
+
+                            <p>鬼使黑</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="picture/img7_1.jpg" data-lightbox="roadtrip">
+                            <span><img src="picture/img7_1.jpg"/></span>
+
+                            <p>鬼使白</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="picture/img8_1.jpg" data-lightbox="roadtrip">
+                            <span><img src="picture/img8_1.jpg"/></span>
+
+                            <p>判官</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="picture/img9.jpg" data-lightbox="roadtrip">
+                            <span><img src="picture/img9.jpg"/></span>
+
+                            <p>荒川之主</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="picture/img10.jpg" data-lightbox="roadtrip">
+                            <span><img src="picture/img10.jpg"/></span>
+
+                            <p>大天狗</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pic_prev ab"><i></i></div>
+            <div class="pic_next ab"><i></i></div>
+        </div>
+    </div>
+    <div class="sideNav">
+        <div class="signBtn"></div>
+        <div class="erwei"><img src="picture/sidepic1.png"/></div>
+        <div class="sideBtn">
+            <ul>
+                <li class="ios"><a
+                        href="http://itunes.apple.com/cn/app/id895670960?mt=8&ign-msr=http%3a%2f%2fwww.ptbus.com%2f"
+                        target="_blank">IOS下载</a></li>
+                <li class="ard"><a href="http://d2.dn.ptbus.com/app/apk/2016/11/ptbus_yinyangshi_1.0.13.apk">安卓下载</a></li>
+                <li class="QQ"><a
+                        href="http://shang.qq.com/wpa/qunwpa?idkey=ac42c3e1734d184a8bcedb1a66319c0beaeb888674d7b86779d673f0ed2ad890">加QQ群</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sign">
+        <div class="signBox fz14">
+            <div class="signClose"></div>
+            <div class="signBox_Tit tac">
+                <span></span>
+
+                <p>来自寮办的祝福</p>
+            </div>
+            <div class="signBox_Txt1 tac">
+                <span>第一签   <font>大吉</font></span>
+
+                <p>闲适如春樱，清净如秋水。</p>
+            </div>
+            <div class="signBox_Txt2">
+                <ul>
+                    <li class="should">
+                        <span>宜</span>
+
+                        <p>抽卡心想事成，化身欧皇</p>
+                    </li>
+                    <li class="Bogey">
+                        <span>忌</span>
+
+                        <p>贪多嚼不烂，适当收手</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="signBox_Txt3">
+                <p>座位朝向：面向北方打游戏，爆率最高。</p>
+
+                <p>今日宜饮：红茶，橙汁</p>
+
+                <p>女神亲近指数：★★★★★</p>
+            </div>
+        </div>
+
+        <div class="signBox fz14">
+            <div class="signClose"></div>
+            <div class="signBox_Tit tac">
+                <span></span>
+
+                <p>来自寮办的祝福</p>
+            </div>
+            <div class="signBox_Txt1 tac">
+                <span>第二签   <font>中吉</font></span>
+
+                <p>满山枫似锦，祭神灵，运可转之。</p>
+            </div>
+            <div class="signBox_Txt2">
+                <ul>
+                    <li class="should">
+                        <span>宜</span>
+
+                        <p>斗技上分，化身大佬</p>
+                    </li>
+                    <li class="Bogey">
+                        <span>忌</span>
+
+                        <p>切勿轻敌，小心阴沟里翻船</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="signBox_Txt3">
+                <p>座位朝向：面向东方打游戏，爆率最高。</p>
+
+                <p>今日宜饮：豆奶，碳酸饮料</p>
+
+                <p>女神亲近指数：★★★★☆</p>
+            </div>
+        </div>
+
+        <div class="signBox fz14">
+            <div class="signClose"></div>
+            <div class="signBox_Tit tac">
+                <span></span>
+
+                <p>来自寮办的祝福</p>
+            </div>
+            <div class="signBox_Txt1 tac">
+                <span>第三签   <font>小吉</font></span>
+
+                <p>春樱虽随风飘散，仍有余香风转廊。</p>
+            </div>
+            <div class="signBox_Txt2">
+                <ul>
+                    <li class="should">
+                        <span>宜</span>
+
+                        <p>刷御魂，各种优质御魂</p>
+                    </li>
+                    <li class="Bogey">
+                        <span>忌</span>
+
+                        <p>切勿因沉迷御魂而耽误时间</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="signBox_Txt3">
+                <p>座位朝向：面向西方打游戏，爆率最高。</p>
+
+                <p>今日宜饮：咖啡，清酒</p>
+
+                <p>女神亲近指数：★★★☆☆</p>
+            </div>
+        </div>
+
+        <div class="signBox fz14">
+            <div class="signClose"></div>
+            <div class="signBox_Tit tac">
+                <span></span>
+
+                <p>来自寮办的祝福</p>
+            </div>
+            <div class="signBox_Txt1 tac">
+                <span>第四签   <font>半吉</font></span>
+
+                <p>默念口中咒，所言非所思</p>
+            </div>
+            <div class="signBox_Txt2">
+                <ul>
+                    <li class="should">
+                        <span>宜</span>
+
+                        <p>刷觉醒，高概率出金素材</p>
+                    </li>
+                    <li class="Bogey">
+                        <span>忌</span>
+
+                        <p>当心被妖怪退治</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="signBox_Txt3">
+                <p>座位朝向：面向南方打游戏，爆率最高。</p>
+
+                <p>今日宜饮：豆奶，乌龙茶</p>
+
+                <p>女神亲近指数：★★☆☆☆</p>
+            </div>
+        </div>
+
+        <div class="signBox fz14">
+            <div class="signClose"></div>
+            <div class="signBox_Tit tac">
+                <span></span>
+
+                <p>来自寮办的祝福</p>
+            </div>
+            <div class="signBox_Txt1 tac">
+                <span>第五签   <font>末吉</font></span>
+
+                <p>莫与独鬼相语，所经之途必遭祸。</p>
+            </div>
+            <div class="signBox_Txt2">
+                <ul>
+                    <li class="should">
+                        <span>宜</span>
+
+                        <p>今天不适合玩阴阳师</p>
+                    </li>
+                    <li class="Bogey">
+                        <span>忌</span>
+
+                        <p>我不信邪，看我出SSR</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="signBox_Txt3">
+                <p>座位朝向：仰天打游戏，爆率最高。</p>
+
+                <p>今日宜饮：豆浆，绿茶</p>
+
+                <p>女神亲近指数：★☆☆☆☆</p>
+            </div>
+        </div>
+        <div class="signOpcy"></div>
+    </div>
+    <link href="css/foot.css" rel="stylesheet" type="text/css"/>
+    <div class="sFoot">
+        <div class="sInner">
+            <div class="sLink">
+                <ul>
+                    <li><a href="http://www.ptbus.com/aboutus.html" target="_blank">关于我们</a></li>
+                    <li><a href="http://www.ptbus.com/contactus.html" target="_blank">联系我们</a></li>
+                    <li><a href="http://www.ptbus.com/recruit.html" target="_blank">诚聘英才</a></li>
+                    <li><a href="http://www.ptbus.com/mobile.html" target="_blank">客户端</a></li>
+                    <li><a href="http://www.ptbus.com/sitemap.html" target="_blank">网站地图</a></li>
+                    <li><a href="http://m.ptbus.com/" target="_blank">手机版</a></li>
+                    <li><a href="http://youxi.ptbus.com/ipad_0_0_0_0_0_0_0/" target="_blank">最新游戏</a></li>
+                    <li class="borNo"><a href="http://www.ptbus.com/hot/map/" target="_blank">最新更新</a></li>
+                </ul>
+            </div>
+            <p>
+                <span><a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备13039367号</a> 京公网安备 11010502026386 京ICP证140355号 京网文【2014】0459-109号</span>
+                <span>未成年人家长监护</span>
+                  <span><a href="javascript:;" target="_blank">北京手游达趣科技有限公司版权所有</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

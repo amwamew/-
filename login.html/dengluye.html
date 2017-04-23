@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    *{
+        margin:0 auto;
+        padding: 0 auto;
+
+    }
+    .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        background: rgba(0,0,0,0.6);
+
+    }
+
+    .box_da {
+        width: 600px;
+        height: 400px;
+        background-color: #0c0c0c;
+        border: 1px solid #000;
+        opacity: 0.7;
+        color: #fff;
+        line-height: 40px;
+        margin-top: 150px;
+       
+
+    }
+    .box .zhong .s1 {
+        margin-left: 30px;
+        font-size: 14px;
+        padding:2px 20px 0;
+        color: #ccc;
+    }
+
+
+
+
+    h2 {
+        text-align: center;
+        padding-top: 20px;
+        color: yellow;
+    }
+    
+    .zhong {
+        padding: 30px 0;
+        width: 480px;
+    }
+
+
+    .box {
+        position: relative
+    }
+    #GB {
+        float: right;
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        position: absolute;
+        color: white;
+        right: 3px;
+        top:5px;
+        font-weight: 700;
+        cursor: pointer;
+        z-index: 50;
+        
+    }
+
+    .JLT1 {
+        width: 40px;
+        height: 40px;
+        background:url("image/icon_other_reg.png") no-repeat -46px -43px ;
+        float: left;
+        position: absolute;
+        top: 320px;
+        left: 180px;
+    }
+    .box .JLT1:hover {
+        background-position:-44px -90px;
+    }
+    .JLT2 {
+        width: 40px;
+        height: 40px;
+        background:url("image/icon_other_reg.png") no-repeat -110px -43px ;
+        float: left;
+        position: absolute;
+        top: 320px;
+        left: 280px;
+    }
+    .box .JLT2:hover{
+        background-position: -110px -90px ;
+    }
+    .JLT3 {
+        width: 40px;
+        height: 40px;
+        background:url("image/icon_other_reg.png") no-repeat -176px -43px ;
+        float: left;
+        position: absolute;
+        top: 320px;
+        left: 366px;
+    }
+    .box .JLT3:hover{
+        background-position: -176px -90px ;
+    }
+
+    .right {
+        color: green;
+        background: url(image/right.png) no-repeat;
+    }
+
+    .wrong {
+
+        color: red;
+        background: url(image/error.png) no-repeat;
+
+    }
+    button {
+        cursor: pointer;
+        float: left;
+        width: 160px;
+        height: 50px;
+        border-style: none;
+    }
+    #but1 {
+        position: absolute;
+        top: 220px;
+        left: 98px;
+    }
+    #but2 {
+        position: absolute;
+        top: 220px;
+        left: 334px;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+    .s1 {
+        margin-left: 10px;
+        color: #525252;
+        font-size: 8px;
+    }
+    input {
+        height: 27px;
+        width: 186px;
+    }
+    label {
+        width: 80px;
+        display: inline-block;
+    }
+    span {
+        padding-left: 20px;
+        width: 40px;
+
+    }
+    .s1 {
+        color: #515151;
+        margin: 10px;
+    }
+    button:hover{
+        background-color: green;
+        color: yellow;
+    }
+
+
+
+
+
+</style>
+<!-- <script src="jquery-1.11.1.min.js"></script> -->
+<script>
+    window.onload = function(){
+        var a = document.getElementsByTagName("a");
+        var boxda = document.getElementById("boxda");
+        var box = document.getElementById("box");
+        var GB = document.getElementById("GB");
+        // var inpArr = document.getElementsByTagName("input");
+        var inp1 =document.getElementById("inp1");
+        var inp2 =document.getElementById("inp2");
+        var   span =document.getElementsByTagName("span");
+        var mask = document.getElementById("mask");
+
+        a[0].onclick = function (){
+            GB.style.display="block"
+
+            mask.style.display="block";
+            boxda.style.display = "block";
+            if(event && event.stopPropagation){
+                event.stopPropagation();
+            }else{
+                event.cancelBubble = true;
+            }
+        }
+        boxda.onclick = function(event
+        ){
+
+            event = event || window.event;
+            if(event && event.stopPropagation){
+                event.stopPropagation();
+            }else{
+                event.cancelBubble = true;
+            }
+
+        }
+
+
+        document.onclick = function (event) {
+            //判断：如果存放的值为login就不管，不是就隐藏mask
+            event = event || window.event;
+            var target = event.target || event.srcElement;
+            if(target.id != "boxda"){
+                //只要不等于login。就隐藏盒子。
+                mask.style.display = "none";
+            }
+        }
+
+        GB.onclick = function () {
+            boxda.style.display="none";
+            mask.style.display="none";
+        }
+
+        //用户登陆
+
+        fn(inp1,/^[a-zA-Z0-9_\-\$]{3,16}$/);
+        //密码
+        inp2.onblur = function () {
+            var reg1 = /^[\$\w\-]{6,18}$/;
+            if(reg1.test(this.value)){
+                //要给后面的span赋值，加类名。(right和wrong)
+                this.nextSibling.className = "right";
+                this.nextSibling.innerHTML = "恭喜您输入正确！";
+            }else{
+                //要给后面的span赋值，加类名。(right和wrong)
+                this.nextSibling.className = "wrong";
+                this.nextSibling.innerHTML = "对不起，格式错误！";
+            }
+        }
+
+
+
+        //方法封装
+        function fn(ele,str){
+
+            ele.onblur = function () {
+
+                var reg = str;
+
+                if(reg.test(this.value)){
+                    //要给后面的span赋值，加类名。(right和wrong)
+                    console.log(this)
+                    this.nextSibling.className = "right";
+                    this.nextSibling.innerHTML = "恭喜您输入正确！";
+                }else{
+
+                    //要给后面的span赋值，加类名。(right和wrong)
+                    this.nextSibling.className = "wrong";
+                    this.nextSibling.innerHTML = "对不起，格式错误！";
+                }
+            }
+        }
+    }
+</script>
+<body >
+
+
+
+<div class="mask" id="mask">
+    <div class="box_da" id="boxda">
+        <div class="box" id="box">
+            <h2>请填写游戏资料</h2>
+            <span class="GB" id="GB">×</span>
+            <div class="zhong">
+                <label>用户账号</label>
+                <input type="text" id="inp1"><span class="s1">请输入您的账号</span><br>
+                <label>登陆密码</label>
+                <input type="text" id="inp2"><span class="s1">请输入您的密码</span><br>
+            </div>
+
+
+            <button id="but1"><h1>开始游戏</h1></button><br>
+            <button id="but2"><h1>注册</h1></button><br>
+
+            <span>――――――――――使用其他账号登陆―――――――――――</span>
+           <a href="#" class="JLT1"></a>
+           <a href="#" class="JLT2"></a>
+           <a href="#" class="JLT3"></a>
+
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
